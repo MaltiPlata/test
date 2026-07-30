@@ -1,0 +1,148 @@
+/* maltiplata — shared guide/article styles. all classes .a- prefixed. */
+:root{
+  --ink:#0f0f0e; --cream:#f4f1ea; --paper:#fbfaf6;
+  --yellow:#e4ff54; --pink:#ff7ab6; --lilac:#c7b9ff; --leaf:#7ddca4; --coral:#ff8a5c;
+  --accent:var(--yellow);
+}
+*,*::before,*::after{box-sizing:border-box;min-width:0}
+html,body{max-width:100%;overflow-x:hidden}
+body{margin:0;background:var(--cream);color:var(--ink);
+  font-family:"Space Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.62}
+
+/* ---------- chrome ---------- */
+.a-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  max-width:1100px;margin:0 auto;padding:20px 22px}
+.a-logo{font-family:"Archivo Black",sans-serif;font-size:19px;text-transform:lowercase;
+  letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+.a-logo span{color:#8d2438}
+.a-navlinks{display:flex;gap:18px;flex-wrap:wrap}
+.a-navlinks a{font-size:14px;text-transform:lowercase;text-decoration:none;color:var(--ink);opacity:.72}
+.a-navlinks a:hover{opacity:1}
+
+/* ---------- hero ---------- */
+.a-hero{max-width:1100px;margin:8px auto 0;padding:0 22px}
+.a-hero-card{background:var(--accent);border:2.5px solid var(--ink);border-radius:20px;
+  box-shadow:8px 8px 0 var(--ink);padding:38px 34px}
+.a-crumb{font-size:13px;text-transform:lowercase;margin:0 0 18px}
+.a-crumb a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--ink)}
+.a-kicker{display:inline-block;background:var(--ink);color:var(--cream);border-radius:999px;
+  padding:5px 13px;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;margin:0 0 16px}
+.a-hero h1{font-family:"Archivo Black",sans-serif;font-weight:400;
+  font-size:clamp(30px,5.2vw,54px);line-height:1.03;letter-spacing:-.022em;
+  text-transform:lowercase;margin:0 0 16px;max-width:900px}
+.a-dek{font-size:clamp(16px,1.9vw,19.5px);line-height:1.5;margin:0;max-width:720px}
+.a-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin:22px 0 0;
+  font-size:12.5px;text-transform:lowercase;opacity:.78}
+
+/* ---------- body ---------- */
+.a-wrap{max-width:1100px;margin:0 auto;padding:0 22px 70px;
+  display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:52px;align-items:start}
+.a-body{max-width:680px;padding-top:44px}
+.a-body>p{font-size:17px;margin:0 0 20px}
+.a-body h2{font-family:"Archivo Black",sans-serif;font-weight:400;font-size:clamp(21px,2.7vw,28px);
+  line-height:1.16;text-transform:lowercase;letter-spacing:-.015em;margin:44px 0 14px;scroll-margin-top:20px}
+.a-body h3{font-family:"Archivo Black",sans-serif;font-weight:400;font-size:17.5px;
+  text-transform:lowercase;margin:30px 0 10px}
+.a-body ul,.a-body ol{padding-left:22px;margin:0 0 20px}
+.a-body li{font-size:16.5px;margin-bottom:9px}
+.a-body strong{font-weight:700}
+.a-body a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--ink);
+  padding-bottom:.5px;font-weight:500;transition:background .12s}
+.a-body a:hover{background:var(--accent)}
+.a-body a[target="_blank"]::after{content:" ↗";font-size:.82em;opacity:.55;border:0}
+
+/* tl;dr */
+.a-tldr{background:var(--ink);color:var(--cream);border-radius:16px;padding:26px 28px;margin:0 0 34px}
+.a-tldr-label{font-family:"Archivo Black",sans-serif;font-size:12px;letter-spacing:.11em;
+  text-transform:uppercase;margin:0 0 14px;color:var(--accent)}
+.a-tldr ul{margin:0;padding-left:19px}
+.a-tldr li{font-size:15.5px;margin-bottom:10px;line-height:1.5}
+.a-tldr li:last-child{margin-bottom:0}
+.a-tldr a{color:var(--cream);border-bottom-color:var(--accent)}
+.a-tldr a:hover{background:transparent;color:var(--accent)}
+
+/* callout */
+.a-call{border:2.5px solid var(--ink);border-radius:14px;padding:22px 24px;margin:32px 0;
+  background:var(--paper);box-shadow:5px 5px 0 var(--ink)}
+.a-call-label{font-family:"Archivo Black",sans-serif;font-size:11.5px;letter-spacing:.1em;
+  text-transform:uppercase;margin:0 0 10px}
+.a-call p{margin:0 0 12px;font-size:16px}
+.a-call p:last-child{margin-bottom:0}
+.a-call--accent{background:var(--accent)}
+
+/* number strip */
+.a-nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:30px 0}
+.a-num{border:2.5px solid var(--ink);border-radius:14px;padding:18px;background:var(--paper)}
+.a-num-big{font-family:"Archivo Black",sans-serif;font-size:27px;line-height:1;margin:0 0 7px}
+.a-num-cap{font-size:12.5px;line-height:1.42;margin:0;opacity:.8}
+
+/* table */
+.a-tablewrap{overflow-x:auto;margin:28px 0;border:2.5px solid var(--ink);border-radius:14px;background:var(--paper)}
+.a-table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:440px}
+.a-table th,.a-table td{padding:13px 15px;text-align:left;border-bottom:1.5px solid rgba(15,15,14,.14)}
+.a-table th{font-family:"Archivo Black",sans-serif;font-weight:400;font-size:12.5px;
+  text-transform:lowercase;background:var(--ink);color:var(--cream);border-bottom:0}
+.a-table tr:last-child td{border-bottom:0}
+.a-table td:first-child{font-weight:600}
+
+/* faq */
+.a-faq{margin:40px 0 0}
+.a-faq details{border:2.5px solid var(--ink);border-radius:12px;background:var(--paper);
+  padding:0;margin-bottom:11px;overflow:hidden}
+.a-faq summary{cursor:pointer;padding:16px 20px;font-weight:600;font-size:15.5px;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center}
+.a-faq summary::-webkit-details-marker{display:none}
+.a-faq summary::after{content:"+";font-family:"Archivo Black",sans-serif;font-size:19px;flex:none}
+.a-faq details[open] summary::after{content:"–"}
+.a-faq details[open] summary{border-bottom:1.5px solid rgba(15,15,14,.14)}
+.a-faq-a{padding:15px 20px 19px;font-size:15.5px}
+.a-faq-a p{margin:0 0 11px}
+.a-faq-a p:last-child{margin:0}
+
+/* sources */
+.a-src{margin:44px 0 0;padding-top:24px;border-top:2.5px solid var(--ink)}
+.a-src h2{font-size:16px!important;margin:0 0 12px!important}
+.a-src ol{padding-left:20px;margin:0}
+.a-src li{font-size:13.5px;margin-bottom:8px;opacity:.9}
+
+/* sidebar */
+.a-side{padding-top:44px;position:sticky;top:20px}
+.a-side-box{border:2.5px solid var(--ink);border-radius:14px;padding:20px;margin-bottom:18px;background:var(--paper)}
+.a-side-label{font-family:"Archivo Black",sans-serif;font-size:11.5px;letter-spacing:.1em;
+  text-transform:uppercase;margin:0 0 13px}
+.a-toc{list-style:none;margin:0;padding:0}
+.a-toc li{margin-bottom:9px;font-size:13.5px;line-height:1.38}
+.a-toc a{color:var(--ink);text-decoration:none;opacity:.78}
+.a-toc a:hover{opacity:1;text-decoration:underline}
+.a-side-box--cta{background:var(--accent)}
+.a-side-box--cta p{font-size:14px;margin:0 0 14px}
+.a-btn{display:block;text-align:center;background:var(--ink);color:var(--cream);
+  border-radius:999px;padding:12px 16px;text-decoration:none;
+  font-family:"Archivo Black",sans-serif;font-size:13.5px;text-transform:lowercase}
+.a-btn:hover{opacity:.87}
+
+/* related */
+.a-rel{max-width:1100px;margin:0 auto;padding:0 22px 70px}
+.a-rel h2{font-family:"Archivo Black",sans-serif;font-weight:400;font-size:22px;
+  text-transform:lowercase;margin:0 0 18px}
+.a-rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.a-rel-card{border:2.5px solid var(--ink);border-radius:14px;padding:20px;text-decoration:none;
+  color:var(--ink);box-shadow:5px 5px 0 var(--ink);display:flex;flex-direction:column;gap:12px;
+  transition:transform .12s,box-shadow .12s}
+.a-rel-card:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.a-rel-kind{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--ink);color:var(--cream);border-radius:999px;padding:4px 10px;align-self:flex-start}
+.a-rel-title{font-family:"Archivo Black",sans-serif;font-size:16px;text-transform:lowercase;line-height:1.16;flex:1}
+.a-rel-go{font-size:13px}
+
+/* footer */
+.a-foot{border-top:2.5px solid var(--ink);padding:30px 22px;text-align:center;font-size:13px}
+.a-foot a{color:var(--ink)}
+.a-disc{max-width:660px;margin:0 auto 12px;font-size:12px;opacity:.72;line-height:1.5}
+
+@media(max-width:900px){
+  .a-wrap{grid-template-columns:1fr;gap:0}
+  .a-side{position:static;padding-top:8px;order:2}
+  .a-body{padding-top:32px;max-width:none}
+  .a-hero-card{padding:28px 22px}
+}
