@@ -1,0 +1,388 @@
+/* maltiplata — homepage enhancement styles */
+
+/* ---------- sticky search bar ---------- */
+#mp-stickybar{
+  position:fixed; top:0; left:0; right:0; z-index:80;
+  background:var(--ink); color:var(--cream);
+  border-bottom:2.5px solid var(--ink);
+  transform:translateY(-105%); transition:transform .22s ease;
+  box-shadow:0 6px 0 rgba(15,15,14,.10);
+}
+#mp-stickybar.is-on{ transform:translateY(0); }
+.mp-sticky-in{
+  max-width:1100px; margin:0 auto; padding:9px 22px;
+  display:flex; align-items:center; gap:14px;
+}
+.mp-sticky-logo{
+  font-family:"Archivo Black",sans-serif; font-size:16px; color:var(--cream);
+  text-decoration:none; white-space:nowrap;
+}
+.mp-sticky-logo span{ color:var(--yellow); }
+.mp-sb-wrap{ position:relative; flex:1; min-width:0; }
+#mp-sb-input{
+  width:100%; font-family:inherit; font-size:15px; padding:10px 16px;
+  border:2.5px solid var(--ink); border-radius:999px; outline:none;
+  background:#fff; color:var(--ink);
+}
+#mp-sb-input:focus{ box-shadow:0 0 0 3px var(--yellow); }
+.mp-sticky-cta{
+  background:var(--yellow); color:var(--ink); text-decoration:none;
+  font-weight:700; font-size:13.5px; padding:9px 16px; border-radius:8px; white-space:nowrap;
+}
+@media(max-width:680px){
+  .mp-sticky-logo,.mp-sticky-cta{ display:none; }
+  .mp-sticky-in{ padding:8px 14px; }
+}
+
+/* ---------- autocomplete ---------- */
+.mp-ac{
+  position:absolute; left:0; right:0; top:calc(100% + 8px); z-index:90;
+  background:#fff; border:2.5px solid var(--ink); border-radius:14px;
+  box-shadow:6px 6px 0 var(--ink); overflow:hidden; max-height:60vh; overflow-y:auto;
+  text-align:left;
+}
+.mp-ac--hero{ top:calc(100% + 10px); }
+.mp-ac-row{
+  display:flex; align-items:center; gap:12px; padding:11px 14px;
+  text-decoration:none; color:var(--ink); border-bottom:1px solid rgba(15,15,14,.12);
+}
+.mp-ac-row:last-of-type{ border-bottom:none; }
+.mp-ac-row:hover,.mp-ac-row.is-active{ background:var(--yellow); }
+.mp-ac-kind{
+  flex:none; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  border:2px solid var(--ink); border-radius:999px; padding:2px 9px; background:#fff;
+}
+.mp-ac-kind--word{ background:var(--lilac); }
+.mp-ac-kind--topic{ background:var(--pink); }
+.mp-ac-kind--guide{ background:var(--yellow); }
+.mp-ac-kind--page{ background:var(--leaf); }
+.mp-ac-txt{ flex:1; min-width:0; display:flex; flex-direction:column; gap:1px; }
+.mp-ac-txt b{ font-size:14.5px; font-weight:700; }
+.mp-ac-txt i{
+  font-style:normal; font-size:12.5px; opacity:.7;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.mp-ac-go{ flex:none; font-weight:700; opacity:.5; }
+.mp-ac-all{
+  display:block; padding:11px 14px; text-align:center; text-decoration:none;
+  color:var(--ink); font-weight:700; font-size:13px;
+  background:var(--cream); border-top:2px solid var(--ink);
+}
+.mp-ac-all:hover{ background:var(--lilac); }
+
+/* ---------- carousel rail ---------- */
+.mp-rail-wrap{ position:relative; }
+.mp-rail{
+  display:flex !important; gap:16px !important;
+  grid-template-columns:none !important;
+  overflow-x:auto; scroll-snap-type:x mandatory;
+  padding:4px 4px 14px; margin:0;
+  scrollbar-width:none;
+}
+.mp-rail::-webkit-scrollbar{ display:none; }
+.mp-rail > *{
+  flex:0 0 300px; scroll-snap-align:start; min-height:auto;
+}
+@media(max-width:560px){ .mp-rail > *{ flex:0 0 84%; } }
+.mp-rail-ctrls{
+  display:flex; align-items:center; gap:8px; padding:2px 4px 0;
+}
+.mp-rail-btn{
+  font-family:inherit; cursor:pointer; background:var(--paper);
+  border:2px solid var(--ink); border-radius:999px;
+  width:34px; height:34px; line-height:1; font-size:14px; font-weight:700; color:var(--ink);
+}
+.mp-rail-btn:hover{ background:var(--yellow); }
+.mp-rail-all{
+  margin-left:auto; text-decoration:none; color:inherit;
+  font-weight:700; font-size:13.5px; border-bottom:3px solid var(--yellow); padding-bottom:2px;
+}
+/* dark sections need light controls */
+#dictionary .mp-rail-btn{ background:transparent; color:var(--cream); border-color:rgba(244,241,234,.5); }
+#dictionary .mp-rail-btn:hover{ background:var(--yellow); color:var(--ink); }
+#dictionary .mp-rail-all{ color:var(--cream); }
+
+/* ---------- "where do i start" entry banner ---------- */
+#mp-startbar{
+  display:flex; align-items:center; gap:14px;
+  max-width:560px; margin:18px auto 0; padding:14px 18px;
+  background:var(--lilac); border:2.5px solid var(--ink); border-radius:16px;
+  box-shadow:5px 5px 0 var(--ink); text-decoration:none; color:var(--ink);
+  transition:transform .12s ease, box-shadow .12s ease; text-align:left;
+}
+#mp-startbar:hover{ transform:translate(-2px,-2px); box-shadow:7px 7px 0 var(--ink); }
+.mp-sb-emoji{ font-size:26px; flex:none; }
+.mp-sb-copy{ flex:1; min-width:0; display:flex; flex-direction:column; gap:2px; }
+.mp-sb-copy b{ font-size:15.5px; font-weight:700; }
+.mp-sb-copy i{ font-style:normal; font-size:13px; opacity:.78; line-height:1.4; }
+.mp-sb-go{ flex:none; font-size:20px; font-weight:700; }
+
+/* ---------- compact strips (matilda / wall) ---------- */
+.mp-strip{
+  max-width:1100px; margin:0 auto; padding:26px 28px;
+  border:2.5px solid var(--ink); border-radius:20px; box-shadow:6px 6px 0 var(--ink);
+  display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+}
+.mp-strip-txt{ flex:1; min-width:260px; }
+.mp-strip-k{
+  margin:0 0 6px; font-size:11.5px; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; opacity:.65;
+}
+.mp-strip-h{
+  font-family:"Archivo Black",sans-serif; font-weight:400; text-transform:lowercase;
+  font-size:clamp(21px,3.2vw,29px); line-height:1.12; letter-spacing:-.018em; margin:0 0 8px;
+}
+.mp-strip-p{ margin:0; font-size:15px; line-height:1.55; opacity:.85; max-width:640px; }
+.mp-strip-cta{
+  flex:none; background:var(--ink); color:var(--cream); text-decoration:none;
+  font-weight:700; font-size:14.5px; padding:13px 22px; border-radius:10px; white-space:nowrap;
+}
+.mp-strip-cta:hover{ transform:translateY(-1px); }
+@media(max-width:640px){ .mp-strip{ padding:22px 18px; } .mp-strip-cta{ width:100%; text-align:center; } }
+
+/* ---------- "start with a topic" section ---------- */
+#top-topics .tt-h2{
+  font-family:"Archivo Black",sans-serif;font-weight:400;font-size:34px;
+  text-transform:lowercase;margin:0;letter-spacing:-.02em;
+}
+#top-topics .soon-kicker{
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  opacity:.55;margin:0 0 8px;
+}
+#top-topics .soon-card{position:relative;overflow:hidden;min-height:186px}
+#top-topics .tt-emoji{font-size:26px;line-height:1;margin:2px 0 -2px}
+#top-topics .soon-title{font-size:19px;line-height:1.12}
+#top-topics .soon-blurb{font-size:13.5px;line-height:1.5;margin:0}
+#top-topics .soon-readit{margin-top:auto;padding-top:6px}
+/* corner dot texture, matching the article heroes */
+#top-topics .soon-card::before{
+  content:"";position:absolute;right:-24px;top:-24px;width:88px;height:88px;
+  background-image:radial-gradient(circle, rgba(15,15,14,.15) 2px, transparent 2.2px);
+  background-size:12px 12px;transform:rotate(-10deg);pointer-events:none;
+}
+
+/* ---------- then/now one-liner ---------- */
+
+
+
+
+
+
+@media(max-width:640px){
+  
+  
+  
+}
+
+/* ---------- herstory: one quiet line ---------- */
+
+
+
+
+
+
+@media(max-width:640px){}
+
+/* ---------- mission band: who we are / why we're here ---------- */
+#mp-mission{ padding:0 22px; margin:44px auto 8px; }
+.mp-mission-card{
+  max-width:1100px; margin:0 auto; padding:38px 34px 34px;
+  background:var(--ink); color:var(--cream);
+  border:2.5px solid var(--ink); border-radius:22px; box-shadow:7px 7px 0 var(--lilac);
+}
+.mp-mission-k{
+  margin:0 0 10px; font-size:11.5px; font-weight:700; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--yellow);
+}
+.mp-mission-h{
+  font-family:"Archivo Black",sans-serif; font-weight:400; text-transform:lowercase;
+  font-size:clamp(30px,5.2vw,46px); line-height:1.02; letter-spacing:-.02em; margin:0 0 14px;
+}
+.mp-mission-lede{
+  margin:0 0 16px; font-size:clamp(17px,2.3vw,21px); line-height:1.45; max-width:730px;
+}
+.mp-mission-lede b{ color:var(--yellow); }
+.mp-mission-p{ margin:0 0 12px; font-size:15.5px; line-height:1.62; max-width:700px; opacity:.82; }
+.mp-mission-cta{
+  display:inline-block; margin-top:12px; background:var(--yellow); color:var(--ink);
+  text-decoration:none; font-weight:700; font-size:14.5px; padding:13px 22px; border-radius:10px;
+  border:2.5px solid var(--ink);
+}
+.mp-mission-cta:hover{ transform:translateY(-1px); }
+@media(max-width:640px){ .mp-mission-card{ padding:28px 20px 26px; } }
+
+/* ---------- name band: what maltiplata means ---------- */
+#matilda{ padding:0 22px; }
+.mp-name{
+  max-width:1100px; margin:0 auto; padding:32px 30px 30px;
+  background:var(--pink); border:2.5px solid var(--ink); border-radius:22px;
+  box-shadow:7px 7px 0 var(--ink);
+}
+.mp-name-k{
+  margin:0 0 16px; font-size:11.5px; font-weight:700; letter-spacing:.14em;
+  text-transform:uppercase; opacity:.65;
+}
+.mp-name-split{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.mp-name-half{
+  background:var(--cream); border:2.5px solid var(--ink); border-radius:16px; padding:18px 20px;
+}
+.mp-name-word{
+  font-family:"Archivo Black",sans-serif; font-weight:400; text-transform:lowercase;
+  font-size:clamp(28px,4.6vw,40px); line-height:1; letter-spacing:-.02em; margin:0 0 12px;
+}
+.mp-name-eq{ margin:0 0 6px; font-size:15.5px; line-height:1.45; }
+.mp-name-eq:last-child{ margin-bottom:0; }
+.mp-name-eq b{ font-weight:700; }
+.mp-name-punch{
+  font-family:"Archivo Black",sans-serif; font-weight:400; text-transform:lowercase;
+  font-size:clamp(20px,3.2vw,29px); line-height:1.15; letter-spacing:-.018em;
+  margin:20px 0 0; text-align:center;
+}
+.mp-name-foot{ margin:14px 0 0; font-size:14px; line-height:1.55; opacity:.8; max-width:640px; }
+.mp-name-cta{
+  display:inline-block; margin-top:16px; background:var(--ink); color:var(--cream);
+  text-decoration:none; font-weight:700; font-size:14.5px; padding:12px 20px; border-radius:10px;
+}
+.mp-name-cta:hover{ transform:translateY(-1px); }
+@media(max-width:640px){
+  .mp-name{ padding:24px 18px; }
+  .mp-name-split{ grid-template-columns:1fr; }
+}
+
+/* ---------- hero highlight: give descenders room inside the box ---------- */
+.hero-highlight{
+  padding:.05em .32em .10em !important;   /* tight box, still clears y/p/g */
+  line-height:1.0 !important;
+  margin:.04em .04em !important;
+  border-radius:10px !important;
+}
+.hero h1, .hero-h1{ line-height:1.16 !important; }
+@media(max-width:640px){
+  .hero-highlight{ padding:.05em .30em .10em !important; border-radius:9px !important; }
+}
+.mp-name-what{
+  margin:0 0 18px; font-size:16px; line-height:1.5; max-width:640px; font-weight:500;
+}
+
+/* descender headroom for lowercase display type */
+.mp-mission-h{ line-height:1.1 !important; padding-bottom:.04em; }
+.mp-name-word{ line-height:1.08 !important; padding-bottom:.03em; }
+.mp-name-punch{ line-height:1.22 !important; }
+
+/* ---------- hero highlight: deliberate sticker tilt ---------- */
+.hero-highlight{
+  transform:rotate(-3.5deg) !important;
+  box-shadow:4px 4px 0 var(--ink);
+  transform-origin:center;
+}
+@media(max-width:640px){
+  .hero-highlight{ transform:rotate(-3deg) !important; box-shadow:3px 3px 0 var(--ink); }
+}
+@media(prefers-reduced-motion:reduce){ .hero-highlight{ transition:none } }
+
+/* ---------- hero sub: make the "what is this" line do the work ---------- */
+.hero-sub b{ font-weight:700; }
+.hero-sub .hero-sub-2{ display:block; margin-top:6px; opacity:.72; }
+
+
+/* ---------- herstory band: three receipts, always visible ---------- */
+#mp-herstory{ padding:0 22px; margin:36px auto 0; }
+.mp-hs-card{
+  max-width:1100px; margin:0 auto; padding:30px 30px 28px;
+  background:var(--lilac); border:2.5px solid var(--ink); border-radius:22px;
+  box-shadow:7px 7px 0 var(--ink);
+}
+.mp-hs-k{
+  margin:0 0 10px; font-size:11.5px; font-weight:700; letter-spacing:.14em;
+  text-transform:uppercase; opacity:.66;
+}
+.mp-hs-h{
+  font-family:"Archivo Black",sans-serif; font-weight:400; text-transform:lowercase;
+  font-size:clamp(24px,4.2vw,38px); line-height:1.06; letter-spacing:-.02em;
+  margin:0 0 12px; padding-bottom:.03em;
+}
+.mp-hs-lede{ margin:0 0 20px; font-size:16px; line-height:1.55; max-width:620px; }
+.mp-hs-list{ list-style:none; margin:0 0 22px; padding:0; display:flex; flex-direction:column; gap:10px; }
+.mp-hs-list li{
+  display:flex; align-items:baseline; gap:16px;
+  background:var(--cream); border:2.5px solid var(--ink); border-radius:13px;
+  padding:13px 17px;
+}
+.mp-hs-y{
+  font-family:"Archivo Black",sans-serif; font-size:22px; line-height:1;
+  letter-spacing:-.02em; flex:none; min-width:62px;
+}
+.mp-hs-t{ font-size:15.5px; line-height:1.45; }
+.mp-hs-links{ display:flex; flex-wrap:wrap; gap:11px; }
+.mp-hs-btn{
+  display:inline-block; background:var(--ink); color:var(--cream); text-decoration:none;
+  font-weight:700; font-size:14.5px; padding:12px 20px; border-radius:10px;
+  border:2.5px solid var(--ink);
+}
+.mp-hs-btn--alt{ background:var(--yellow); color:var(--ink); }
+.mp-hs-btn:hover{ transform:translateY(-1px); }
+@media(max-width:640px){
+  .mp-hs-card{ padding:24px 19px 22px; }
+  .mp-hs-list li{ flex-direction:column; gap:5px; }
+  .mp-hs-btn{ width:100%; text-align:center; }
+}
+
+/* ---------- hero hierarchy: positioning line leads, headline supports ---------- */
+.hero-eyebrow{
+  font-family:"Archivo Black",sans-serif !important;
+  font-weight:400 !important;
+  font-size:clamp(30px,5.6vw,56px) !important;
+  letter-spacing:-.015em !important;
+  text-transform:none !important;
+  line-height:1.12 !important;
+  opacity:1 !important;
+  margin-bottom:12px !important;
+  color:var(--ink) !important;
+}
+.hero h1{
+  font-size:clamp(21px,2.9vw,33px) !important;
+  opacity:.78;
+  margin-bottom:16px !important;
+}
+@media(max-width:640px){
+  .hero-eyebrow{ font-size:33px !important; }
+  .hero h1{ font-size:21px !important; }
+}
+
+/* ---------- colour system: yellow = action, pastels = category ---------- */
+/* yellow is reserved for things you can click. it should never decorate. */
+.mp-hs-btn--alt, .mp-mission-cta, .a-navcta, .hero-highlight{ background:var(--yellow); }
+
+/* one background family for content bands — no black/cream alternation */
+.mp-mission-card{
+  background:var(--cream) !important;
+  color:var(--ink) !important;
+  box-shadow:7px 7px 0 var(--ink) !important;
+}
+.mp-mission-k{ color:var(--ink) !important; opacity:.62; }
+.mp-mission-lede b{ color:var(--ink) !important; background:var(--yellow); padding:0 .18em; border-radius:4px; }
+.mp-mission-p{ opacity:.82; }
+.mp-mission-cta{ color:var(--ink) !important; border:2.5px solid var(--ink); }
+.mp-mission-p b{ background:var(--yellow); padding:0 .18em; border-radius:4px; font-weight:700; }
+
+/* ---------- shared card icons ---------- */
+.mp-ico-wrap{ display:block; margin-bottom:10px; }
+.mp-ico{
+  width:38px; height:38px; display:block;
+  fill:none; stroke:var(--ink); stroke-width:2.4;
+  stroke-linecap:round; stroke-linejoin:round;
+}
+.l-card:hover .mp-ico{ transform:translateY(-2px); transition:transform .14s ease; }
+@media(max-width:640px){ .mp-ico{ width:32px; height:32px; } }
+
+/* ---------- mission band: seat-at-the-table illustration ---------- */
+.mp-table{
+  display:block; width:100%; max-width:330px; height:auto; margin:0 0 18px;
+  fill:none; stroke:var(--ink); stroke-width:3; stroke-linecap:round; stroke-linejoin:round;
+}
+.mp-table .mp-t-fig{ opacity:.34; }
+.mp-table .mp-t-top{ stroke-width:4.5; }
+.mp-table .mp-t-chair{ stroke:var(--coral); stroke-width:4; }
+@media(max-width:640px){ .mp-table{ max-width:260px; margin-bottom:14px; } }
+.mp-mission-punch{ opacity:1 !important; font-size:16.5px !important; }
+.mp-mission-punch b{ background:var(--yellow); padding:0 .18em; border-radius:4px; }

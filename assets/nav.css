@@ -1,0 +1,102 @@
+/* maltiplata — mobile nav styles. Loaded on every page. */
+
+#mp-menu-btn { display: none; }
+
+@media (max-width: 860px) {
+  #mp-menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 46px;
+    height: 40px;
+    padding: 0 10px;
+    margin-left: 10px;
+    background: transparent;
+    border: 2.5px solid currentColor;
+    border-radius: 10px;
+    cursor: pointer;
+    flex: none;
+    color: var(--cream, #FBF6EC);
+  }
+  #mp-menu-btn span {
+    display: block;
+    height: 2.5px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform .18s ease, opacity .18s ease;
+  }
+  #mp-menu-btn.is-open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  #mp-menu-btn.is-open span:nth-child(2) { opacity: 0; }
+  #mp-menu-btn.is-open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+}
+
+#mp-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(20, 20, 20, .55);
+  backdrop-filter: blur(2px);
+}
+#mp-menu[hidden] { display: none; }
+#mp-menu nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  background: var(--ink, #141414);
+  border-bottom: 3px solid var(--yellow, #E4FF54);
+  padding: 78px 20px 22px;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+#mp-menu ul { list-style: none; margin: 0 0 16px; padding: 0; }
+#mp-menu li + li { border-top: 1px solid rgba(251, 246, 236, .16); }
+#mp-menu a {
+  display: block;
+  padding: 15px 4px;
+  color: var(--cream, #FBF6EC);
+  text-decoration: none;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  letter-spacing: -.01em;
+}
+#mp-menu a[aria-current="page"] { color: var(--yellow, #E4FF54); }
+#mp-menu a:active { opacity: .7; }
+#mp-menu .mp-menu-cta {
+  display: block;
+  text-align: center;
+  background: var(--yellow, #E4FF54);
+  color: var(--ink, #141414);
+  border-radius: 12px;
+  padding: 15px 18px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 15.5px;
+}
+html.mp-menu-lock { overflow: hidden; }
+
+/* back-to-top */
+#mp-top {
+  position: fixed;
+  right: 16px;
+  bottom: 18px;
+  z-index: 150;
+  background: var(--ink, #141414);
+  color: var(--cream, #FBF6EC);
+  border: 2.5px solid var(--cream, #FBF6EC);
+  border-radius: 999px;
+  padding: 11px 16px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+}
+#mp-top.is-on { opacity: 1; transform: none; pointer-events: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  #mp-menu-btn span, #mp-top { transition: none; }
+}

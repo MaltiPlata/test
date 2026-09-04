@@ -1,0 +1,10 @@
+# Cache policy. HTML must revalidate so new deploys appear immediately;
+# CSS/JS are safe to cache forever because regen.py stamps them with ?v=<hash>.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
