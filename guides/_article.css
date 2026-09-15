@@ -366,3 +366,62 @@ body{margin:0;background:var(--cream);color:var(--ink);
 /* dictionary uses the topic pillars already, plus: */
 .l-card[data-kind="home"]  { --rail: var(--coral); }
 .l-card[data-kind="word"]  { --rail: var(--lilac); }
+
+/* ═══════════════════════════════════════════════════════════
+   MALTIPLATA 2026 — DARK THEME OVERRIDE
+   appended; later rules win. delete this block to revert.
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --bg:#0e0e10; --surface:#17171a; --line:rgba(255,255,255,.14);
+  --text:#f2f2f0; --muted:#f2f2f0a6;
+  --rose:#ff0066; --green:#00e08a; --yellow:#f5e900; --sky:#00ccff; --hot:#ff61b1;
+  /* remap legacy tokens onto the new palette */
+  --cream:#0e0e10; --paper:#17171a;
+  --pink:#00ccff; --lilac:#ff61b1; --leaf:#00e08a; --coral:#ff0066;
+  --accent:var(--green);
+}
+body{ background:var(--bg); color:var(--text); }
+
+/* nav */
+.a-nav{ background:rgba(14,14,16,.88); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line); color:var(--text); }
+.a-logo{ color:var(--text); }
+.a-logo .s{ color:var(--rose); }
+.a-navlinks a{ color:var(--muted); opacity:1; }
+.a-navlinks a:hover{ color:var(--text); }
+.a-navlinks a.a-navcta{ background:var(--rose); color:#fff; border-radius:999px; }
+
+/* body text */
+.a-wrap, .a-body, p, li, dd{ color:var(--text); }
+.a-body p, .a-body li{ color:var(--muted); }
+.a-body strong, .a-body b{ color:var(--text); }
+h1,h2,h3,h4{ color:var(--text); }
+a{ color:var(--sky); }
+.a-body a{ color:var(--sky); }
+
+/* surfaces: dark cards, hairline borders, no hard offset shadows */
+.a-callout,.a-num,.a-tablewrap,.a-faq details,.a-side-box,.l-card,.a-card,.a-cta,.l-search{
+  background:var(--surface)!important;
+  border-color:var(--line)!important;
+  box-shadow:none!important;
+  color:var(--text);
+}
+.a-callout,.a-num,.a-tablewrap,.a-faq details,.a-side-box{ border-width:1px!important; }
+.l-card{ border-width:1px!important; }
+.l-card[data-featured="1"]{ --tint:var(--surface)!important; background:var(--surface)!important; }
+
+/* tables */
+table{ color:var(--text); }
+th{ background:rgba(255,255,255,.05); color:var(--text); }
+td,th{ border-color:var(--line)!important; }
+
+/* accent highlight */
+mark,.a-hl{ background:var(--green); color:#0e0e10; }
+
+/* inputs */
+input,select,textarea{ background:rgba(255,255,255,.07); color:var(--text);
+  border:1px solid rgba(255,255,255,.3); }
+input::placeholder{ color:#f2f2f077; }
+
+/* footer */
+footer,.a-foot,.l-foot{ background:transparent; border-top:1px solid var(--line); color:var(--muted); }
