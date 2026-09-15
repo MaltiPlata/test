@@ -205,8 +205,63 @@ Error generating stack: `+o.message+`
     }
   ]
 }</script>
-  <link rel="stylesheet" href="./assets/home-enhance.css?v=3bf3d8a6" />
-<link rel="stylesheet" href="./assets/nav.css?v=3bf3d8a6" />
+  <link rel="stylesheet" href="./assets/home-enhance.css?v=d26k1" />
+<link rel="stylesheet" href="./assets/nav.css?v=d26k1" />
+<style id="mp-dark-2026">
+/* ═══ MALTIPLATA 2026 — DARK THEME. delete this block to revert. ═══ */
+:root{
+  --bg:#0e0e10; --surface:#17171a; --line:rgba(255,255,255,.14);
+  --text:#f2f2f0; --muted:#f2f2f0a6;
+  --rose:#ff0066; --green:#00e08a; --yellow:#f5e900; --sky:#00ccff; --hot:#ff61b1;
+  --ink:#0e0e10; --cream:#0e0e10; --paper:#17171a;
+  --pink:#00ccff; --lilac:#ff61b1; --leaf:#00e08a; --coral:#ff0066;
+}
+html,body{ background:#0e0e10!important; color:#f2f2f0!important; }
+h1,h2,h3,h4,h5{ color:#f2f2f0; }
+p,li,span,div,dd,dt,label{ color:inherit; }
+
+/* nav */
+.nav,.site-nav,header nav{ background:rgba(14,14,16,.88)!important;
+  -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line)!important; }
+.nav a,.nav-links a{ color:var(--muted)!important; }
+.nav a:hover{ color:var(--text)!important; }
+.nav-links a.nav-cta,.nav-cta{ background:var(--rose)!important; color:#fff!important;
+  border-radius:999px!important; }
+
+/* hero highlight -> green, with descender room */
+.hero-highlight{ background:var(--green)!important; color:#0e0e10!important;
+  padding:.02em 10px .16em!important; border-radius:6px; line-height:1.3; }
+
+/* any light card surface -> dark card */
+[class*="card"],[class*="box"],[class*="panel"],[class*="tile"],
+.topic,.guide,.sticker,.decoder,.dict-card{
+  background:var(--surface)!important;
+  border-color:var(--line)!important;
+  box-shadow:none!important;
+  color:var(--text)!important;
+}
+/* kill hard offset shadows sitewide */
+*{ text-shadow:none; }
+
+/* buttons */
+button,.btn,[class*="cta"]{ border-radius:999px; }
+.join-form button,button[type=submit]{ background:var(--rose)!important; color:#fff!important;
+  border:none!important; }
+
+/* inputs */
+input,select,textarea{ background:rgba(255,255,255,.07)!important; color:var(--text)!important;
+  border:1px solid rgba(255,255,255,.3)!important; border-radius:999px; }
+input::placeholder{ color:#f2f2f077!important; }
+
+/* footer */
+footer,.footer{ background:transparent!important; border-top:1px solid var(--line);
+  color:var(--muted)!important; }
+
+/* links */
+a{ color:inherit; }
+main a:not([class]){ color:var(--sky)!important; }
+</style>
 </head>
   <body>
     <div id="root"></div>
