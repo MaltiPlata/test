@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>the money map — free guide · maltiplata</title>
+<meta name="description" content="a free 3-page guide: what belongs in your own name, where every dollar goes, and the tax + kids stuff nobody explained. plain language, for women." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#0e0e10; --surface:#17171a; --line:rgba(255,255,255,.14);
+  --cream:#f2f2f0; --muted:#f2f2f0a6;
+  --rose:#ff0066; --green:#00e08a; --yellow:#f5e900; --sky:#00ccff; --hot:#ff61b1;
+}
+*{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+html,body{ max-width:100%; overflow-x:hidden; }
+body{ margin:0; background:var(--bg); color:var(--cream);
+  font-family:'Space Grotesk',sans-serif; -webkit-font-smoothing:antialiased; }
+a{ color:inherit; }
+img{ max-width:100%; }
+.wrap{ max-width:1080px; margin:0 auto; padding:0 20px; }
+
+.kick{ display:inline-flex; align-items:center; gap:9px; font-size:12px; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+.kick::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--sky); flex:none; }
+.hl{ background:var(--green); color:#0e0e10; padding:0.02em 10px 0.16em;
+  box-decoration-break:clone; -webkit-box-decoration-break:clone; border-radius:6px; }
+
+.pill{ display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  background:var(--rose); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700;
+  font-size:16px; text-decoration:none; padding:15px 28px; border-radius:999px; border:none;
+  cursor:pointer; min-height:50px; box-shadow:0 10px 26px -10px rgba(255,0,102,.75);
+  transition:transform .13s ease; }
+.pill:hover{ transform:translateY(-2px); }
+.pill.sm{ font-size:14px; padding:11px 18px; min-height:44px; box-shadow:none; }
+
+/* nav */
+.nav{ position:sticky; top:0; z-index:60; display:flex; align-items:center; justify-content:space-between;
+  gap:12px; min-height:64px; padding:10px 20px; background:rgba(14,14,16,.88);
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+.logo{ font-family:'Archivo Black',sans-serif; font-size:20px; text-decoration:none; color:var(--cream); white-space:nowrap; }
+.logo .sl{ color:var(--rose); }
+.navlinks{ display:flex; align-items:center; gap:20px; }
+.navlinks a{ font-size:13.5px; font-weight:600; text-decoration:none; color:var(--muted); white-space:nowrap; }
+.navlinks a:hover, .navlinks a[aria-current]{ color:var(--cream); }
+
+h1{ font-family:'Archivo Black',sans-serif; font-weight:400; font-size:clamp(34px,7vw,62px);
+  line-height:1.03; letter-spacing:-.02em; text-transform:lowercase; margin:14px 0 0; }
+h2{ font-family:'Archivo Black',sans-serif; font-weight:400; font-size:clamp(25px,4.6vw,40px);
+  line-height:1.06; letter-spacing:-.02em; text-transform:lowercase; margin:12px 0 0; }
+.lede{ font-size:clamp(15px,2.2vw,18px); line-height:1.55; max-width:60ch; margin:16px 0 0; color:var(--muted); }
+.lede b{ color:var(--cream); }
+.sec{ padding:52px 0 0; }
+
+/* cards */
+.cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:22px; }
+.card{ border:1px solid var(--line); border-top:3px solid; border-radius:14px; padding:18px 16px; background:var(--surface); }
+.card .bn{ display:inline-grid; place-items:center; width:32px; height:32px; border-radius:50%;
+  color:#0e0e10; font-family:'Archivo Black',sans-serif; font-size:14px; margin-bottom:9px; }
+.card .bt{ font-family:'Archivo Black',sans-serif; font-size:15.5px; text-transform:lowercase; line-height:1.2; }
+.card .bd{ font-size:13px; line-height:1.5; margin-top:6px; color:var(--muted); }
+.c-green{ border-top-color:var(--green); } .c-green .bn{ background:var(--green); }
+.c-sky{ border-top-color:var(--sky); } .c-sky .bn{ background:var(--sky); }
+.c-hot{ border-top-color:var(--hot); } .c-hot .bn{ background:var(--hot); }
+.c-yellow{ border-top-color:var(--yellow); } .c-yellow .bn{ background:var(--yellow); }
+.c-rose{ border-top-color:var(--rose); } .c-rose .bn{ background:var(--rose); color:#fff; }
+
+/* inline email form */
+.emailform{ display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+.emailin{ flex:1 1 240px; min-width:0; border:1px solid rgba(255,255,255,.3); background:rgba(255,255,255,.07);
+  color:var(--cream); border-radius:999px; padding:14px 20px; font-size:16px;
+  font-family:'Space Grotesk',sans-serif; outline:none; min-height:50px; }
+.emailin::placeholder{ color:#f2f2f077; }
+.microline{ font-size:12.5px; color:var(--muted); margin-top:10px; line-height:1.45; }
+
+/* FLOATING CAPTURE */
+.floatcta{ position:fixed; right:22px; bottom:22px; z-index:90; width:330px; max-width:calc(100vw - 32px);
+  background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--green);
+  border-radius:16px; padding:18px 18px 16px; box-shadow:0 24px 60px -18px rgba(0,0,0,.85);
+  transform:translateY(160%); transition:transform .35s cubic-bezier(.2,.8,.2,1); }
+.floatcta.show{ transform:translateY(0); }
+.floatcta.hide{ display:none; }
+.floatcta .ft{ font-family:'Archivo Black',sans-serif; font-size:16px; text-transform:lowercase; padding-right:26px; }
+.floatcta .fd{ font-size:12.5px; color:var(--muted); margin-top:5px; line-height:1.45; }
+.floatcta .emailform{ margin-top:12px; gap:8px; }
+.floatcta .emailin{ flex:1 1 100%; padding:12px 16px; min-height:46px; font-size:16px; }
+.floatcta .pill{ flex:1 1 100%; font-size:14px; padding:12px 18px; min-height:46px; box-shadow:none; }
+.fclose{ position:absolute; top:10px; right:10px; width:30px; height:30px; border-radius:50%;
+  border:none; background:rgba(255,255,255,.08); color:var(--cream); font-size:16px; line-height:1;
+  cursor:pointer; display:grid; place-items:center; }
+.fclose:hover{ background:rgba(255,255,255,.16); }
+
+/* footer */
+.footer{ border-top:1px solid var(--line); color:var(--muted); padding:28px 20px 40px;
+  font-size:12px; line-height:1.6; margin-top:56px; }
+.footer-top{ display:flex; justify-content:space-between; align-items:center; gap:14px;
+  flex-wrap:wrap; margin-bottom:12px; color:var(--cream); max-width:1080px; margin-inline:auto; }
+.footer-links{ display:flex; gap:16px; font-weight:600; font-size:13px; flex-wrap:wrap; }
+.footer-links a{ text-decoration:none; }
+.footer-fine{ max-width:70ch; margin:0 auto; }
+
+@media (max-width:760px){
+  .navlinks{ gap:14px; }
+  .navlinks a.hide-sm{ display:none; }
+  .sec{ padding:40px 0 0; }
+  /* floating CTA becomes a bottom bar */
+  .floatcta{ right:0; left:0; bottom:0; width:100%; max-width:none; border-radius:16px 16px 0 0;
+    border-left:none; border-right:none; border-bottom:none; padding:16px 16px calc(16px + env(safe-area-inset-bottom)); }
+  .floatcta .emailform{ flex-wrap:nowrap; }
+  .floatcta .emailin{ flex:1 1 auto; }
+  .floatcta .pill{ flex:0 0 auto; padding:12px 16px; }
+  body.has-float{ padding-bottom:150px; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="logo" href="./start.html">malti<span class="sl">/</span>plata</a>
+  <span class="navlinks">
+    
+    <a href="./start.html">start here</a><a href="./about.html">the name</a>
+    <a href="./license.html" class="hide-sm">your license</a>
+    <a class="pill sm" href="#get">get the guide</a>
+  </span>
+</nav>
+
+<div class="wrap">
+
+  <header class="sec" style="padding-top:44px">
+    <span class="kick">free guide · money + legal 101</span>
+    <h1>your own money.<br>your own <span class="hl">everything</span>.</h1>
+    <p class="lede">the money map is a <b>3-page plain-language guide</b> to what should be in your name, where each dollar goes, and the tax stuff nobody explained. no jargon, no fear-mongering.</p>
+    <form class="emailform" id="get" data-capture method="post" novalidate>
+      <input class="emailin" type="email" name="email" required placeholder="your@email.com" aria-label="Email address" />
+      <button class="pill" type="submit">get the money map →</button>
+    </form>
+    <div class="microline">sent straight to your inbox — no spam, unsubscribe anytime.</div>
+  </header>
+
+  <section class="sec">
+    <span class="kick">what's inside</span>
+    <h2>five things that should be <span class="hl">yours</span>.</h2>
+    <div class="cards">
+      <div class="card c-green"><div class="bn">1</div><div class="bt">an account that's yours alone</div><div class="bd">the single most important line — one you can reach without asking anyone.</div></div>
+      <div class="card c-sky"><div class="bn">2</div><div class="bt">credit in your own name</div><div class="bd">how a score gets built that's actually yours, not borrowed.</div></div>
+      <div class="card c-hot"><div class="bn">3</div><div class="bt">access to the paperwork</div><div class="bd">where it all lives, and how to get to it in an afternoon.</div></div>
+      <div class="card c-sky"><div class="bn">4</div><div class="bt">a cushion that's yours</div><div class="bd">a starter emergency fund — what lets you handle a surprise, or leave, without asking anyone.</div></div>
+      <div class="card c-yellow"><div class="bn">5</div><div class="bt">one number you know</div><div class="bd">in, out, and what you're worth — so nothing blindsides you.</div></div>
+      <div class="card c-rose"><div class="bn">+</div><div class="bt">the kids &amp; taxes layer</div><div class="bd">head of household, the child credits, your W-4, and the single-parent must-dos.</div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="kick">same map, every stage</span>
+    <h2>wherever you're starting from.</h2>
+    <div class="cards">
+      <div class="card c-green"><div class="bt">doing well</div><div class="bd">this is the audit. run it and you'll almost always find one thing you assumed was covered but isn't in your name.</div></div>
+      <div class="card c-sky"><div class="bt">going through a change</div><div class="bd">a breakup, a divorce, a loss — these become your first moves, in order.</div></div>
+      <div class="card c-hot"><div class="bt">starting over</div><div class="bd">one at a time, smallest first. done beats perfect, and momentum is the whole game.</div></div>
+      <div class="card c-yellow"><div class="bt">raising kids solo</div><div class="bd">the tax breaks you're likely leaving on the table, and the paperwork that protects them.</div></div>
+    </div>
+    <p class="lede" style="margin-top:20px">there's more where this came from — <a href="./license.html" style="color:var(--sky)">getting your license</a> and <a href="./about.html" style="color:var(--sky)">why we're called maltiplata</a>.</p>
+  </section>
+
+</div>
+
+<!-- FLOATING CAPTURE -->
+<aside class="floatcta">
+  <button class="fclose" aria-label="Close">×</button>
+  <div class="ft">get the money map — free</div>
+  <div class="fd">3 pages, plain language. what belongs in your name, and what to do first.</div>
+  <form class="emailform" data-capture method="post" novalidate>
+    <input class="emailin" type="email" name="email" required placeholder="your@email.com" aria-label="Email address" />
+    <button class="pill" type="submit">send it →</button>
+  </form>
+</aside>
+
+<footer class="footer">
+  <div class="footer-top">
+    <a class="logo" href="./start.html">malti<span class="sl">/</span>plata</a>
+    <span class="footer-links">
+      <a href="./start.html">start here</a><a href="./about.html">the name</a><a href="./license.html">your license</a>
+      <a href="https://www.instagram.com/maltiplata/">instagram</a>
+    </span>
+  </div>
+  <div class="footer-fine">the fine print (in plain words): maltiplata is education, not financial or legal advice. numbers are illustrative and never guaranteed. for your own situation, talk to a licensed pro. © 2026 maltiplata.</div>
+</footer>
+
+<script>
+// ── EMAIL SETUP: paste your ConvertKit/Mailchimp form ACTION url below.
+// Empty = forms just hand over the PDF (works today, no capture yet).
+var FORM_ENDPOINT = "";
+var PDF = "./downloads/the-money-map-maltiplata.pdf";
+
+document.querySelectorAll("form[data-capture]").forEach(function(f){
+  f.addEventListener("submit", function(e){
+    if(!FORM_ENDPOINT){ e.preventDefault(); window.location.href = PDF; return; }
+    f.action = FORM_ENDPOINT;
+  });
+});
+
+(function(){
+  var box = document.querySelector(".floatcta");
+  if(!box) return;
+  // respect dismissal for the session
+  if(sessionStorage.getItem("mp_float_closed") === "1"){ box.classList.add("hide"); return; }
+  document.body.classList.add("has-float");
+
+  var shown = false;
+  function onScroll(){
+    if(shown) return;
+    if(window.scrollY > 520){ box.classList.add("show"); shown = true; }
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  box.querySelector(".fclose").addEventListener("click", function(){
+    box.classList.remove("show");
+    document.body.classList.remove("has-float");
+    try{ sessionStorage.setItem("mp_float_closed","1"); }catch(e){}
+    setTimeout(function(){ box.classList.add("hide"); }, 350);
+  });
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>start here — what's happening right now? · maltiplata</title>
+<meta name="description" content="find what you need by what's actually happening in your life right now — first job, a lease, a license, a baby, a divorce, starting over." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+
+:root{
+  --bg:#0e0e10; --surface:#17171a; --line:rgba(255,255,255,.14);
+  --cream:#f2f2f0; --muted:#f2f2f0a6;
+  --rose:#ff0066; --green:#00e08a; --yellow:#f5e900; --sky:#00ccff; --hot:#ff61b1;
+}
+*{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+html,body{ max-width:100%; overflow-x:hidden; }
+body{ margin:0; background:var(--bg); color:var(--cream);
+  font-family:'Space Grotesk',sans-serif; -webkit-font-smoothing:antialiased; }
+a{ color:inherit; }
+img{ max-width:100%; }
+.wrap{ max-width:1080px; margin:0 auto; padding:0 20px; }
+
+.kick{ display:inline-flex; align-items:center; gap:9px; font-size:12px; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+.kick::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--sky); flex:none; }
+.hl{ background:var(--green); color:#0e0e10; padding:0.02em 10px 0.16em;
+  box-decoration-break:clone; -webkit-box-decoration-break:clone; border-radius:6px; }
+
+.pill{ display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  background:var(--rose); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700;
+  font-size:16px; text-decoration:none; padding:15px 28px; border-radius:999px; border:none;
+  cursor:pointer; min-height:50px; box-shadow:0 10px 26px -10px rgba(255,0,102,.75);
+  transition:transform .13s ease; }
+.pill:hover{ transform:translateY(-2px); }
+.pill.sm{ font-size:14px; padding:11px 18px; min-height:44px; box-shadow:none; }
+
+/* nav */
+.nav{ position:sticky; top:0; z-index:60; display:flex; align-items:center; justify-content:space-between;
+  gap:12px; min-height:64px; padding:10px 20px; background:rgba(14,14,16,.88);
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+.logo{ font-family:'Archivo Black',sans-serif; font-size:20px; text-decoration:none; color:var(--cream); white-space:nowrap; }
+.logo .sl{ color:var(--rose); }
+.navlinks{ display:flex; align-items:center; gap:20px; }
+.navlinks a{ font-size:13.5px; font-weight:600; text-decoration:none; color:var(--muted); white-space:nowrap; }
+.navlinks a:hover, .navlinks a[aria-current]{ color:var(--cream); }
+
+h1{ font-family:'Archivo Black',sans-serif; font-weight:400; font-size:clamp(34px,7vw,62px);
+  line-height:1.03; letter-spacing:-.02em; text-transform:lowercase; margin:14px 0 0; }
+h2{ font-family:'Archivo Black',sans-serif; font-weight:400; font-size:clamp(25px,4.6vw,40px);
+  line-height:1.06; letter-spacing:-.02em; text-transform:lowercase; margin:12px 0 0; }
+.lede{ font-size:clamp(15px,2.2vw,18px); line-height:1.55; max-width:60ch; margin:16px 0 0; color:var(--muted); }
+.lede b{ color:var(--cream); }
+.sec{ padding:52px 0 0; }
+
+/* cards */
+.cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:22px; }
+.card{ border:1px solid var(--line); border-top:3px solid; border-radius:14px; padding:18px 16px; background:var(--surface); }
+.card .bn{ display:inline-grid; place-items:center; width:32px; height:32px; border-radius:50%;
+  color:#0e0e10; font-family:'Archivo Black',sans-serif; font-size:14px; margin-bottom:9px; }
+.card .bt{ font-family:'Archivo Black',sans-serif; font-size:15.5px; text-transform:lowercase; line-height:1.2; }
+.card .bd{ font-size:13px; line-height:1.5; margin-top:6px; color:var(--muted); }
+.c-green{ border-top-color:var(--green); } .c-green .bn{ background:var(--green); }
+.c-sky{ border-top-color:var(--sky); } .c-sky .bn{ background:var(--sky); }
+.c-hot{ border-top-color:var(--hot); } .c-hot .bn{ background:var(--hot); }
+.c-yellow{ border-top-color:var(--yellow); } .c-yellow .bn{ background:var(--yellow); }
+.c-rose{ border-top-color:var(--rose); } .c-rose .bn{ background:var(--rose); color:#fff; }
+
+/* inline email form */
+.emailform{ display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+.emailin{ flex:1 1 240px; min-width:0; border:1px solid rgba(255,255,255,.3); background:rgba(255,255,255,.07);
+  color:var(--cream); border-radius:999px; padding:14px 20px; font-size:16px;
+  font-family:'Space Grotesk',sans-serif; outline:none; min-height:50px; }
+.emailin::placeholder{ color:#f2f2f077; }
+.microline{ font-size:12.5px; color:var(--muted); margin-top:10px; line-height:1.45; }
+
+/* FLOATING CAPTURE */
+.floatcta{ position:fixed; right:22px; bottom:22px; z-index:90; width:330px; max-width:calc(100vw - 32px);
+  background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--green);
+  border-radius:16px; padding:18px 18px 16px; box-shadow:0 24px 60px -18px rgba(0,0,0,.85);
+  transform:translateY(160%); transition:transform .35s cubic-bezier(.2,.8,.2,1); }
+.floatcta.show{ transform:translateY(0); }
+.floatcta.hide{ display:none; }
+.floatcta .ft{ font-family:'Archivo Black',sans-serif; font-size:16px; text-transform:lowercase; padding-right:26px; }
+.floatcta .fd{ font-size:12.5px; color:var(--muted); margin-top:5px; line-height:1.45; }
+.floatcta .emailform{ margin-top:12px; gap:8px; }
+.floatcta .emailin{ flex:1 1 100%; padding:12px 16px; min-height:46px; font-size:16px; }
+.floatcta .pill{ flex:1 1 100%; font-size:14px; padding:12px 18px; min-height:46px; box-shadow:none; }
+.fclose{ position:absolute; top:10px; right:10px; width:30px; height:30px; border-radius:50%;
+  border:none; background:rgba(255,255,255,.08); color:var(--cream); font-size:16px; line-height:1;
+  cursor:pointer; display:grid; place-items:center; }
+.fclose:hover{ background:rgba(255,255,255,.16); }
+
+/* footer */
+.footer{ border-top:1px solid var(--line); color:var(--muted); padding:28px 20px 40px;
+  font-size:12px; line-height:1.6; margin-top:56px; }
+.footer-top{ display:flex; justify-content:space-between; align-items:center; gap:14px;
+  flex-wrap:wrap; margin-bottom:12px; color:var(--cream); max-width:1080px; margin-inline:auto; }
+.footer-links{ display:flex; gap:16px; font-weight:600; font-size:13px; flex-wrap:wrap; }
+.footer-links a{ text-decoration:none; }
+.footer-fine{ max-width:70ch; margin:0 auto; }
+
+@media (max-width:760px){
+  .navlinks{ gap:14px; }
+  .navlinks a.hide-sm{ display:none; }
+  .sec{ padding:40px 0 0; }
+  /* floating CTA becomes a bottom bar */
+  .floatcta{ right:0; left:0; bottom:0; width:100%; max-width:none; border-radius:16px 16px 0 0;
+    border-left:none; border-right:none; border-bottom:none; padding:16px 16px calc(16px + env(safe-area-inset-bottom)); }
+  .floatcta .emailform{ flex-wrap:nowrap; }
+  .floatcta .emailin{ flex:1 1 auto; }
+  .floatcta .pill{ flex:0 0 auto; padding:12px 16px; }
+  body.has-float{ padding-bottom:150px; }
+}
+
+
+
+  /* situation router */
+  .rgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; margin-top:24px; }
+  .rcard{ display:block; text-decoration:none; border:1px solid var(--line); border-left:4px solid;
+    border-radius:14px; padding:20px 18px; background:var(--surface); transition:transform .14s ease, border-color .14s ease; }
+  .rcard:hover{ transform:translateY(-3px); }
+  .rcard .rt{ font-family:'Archivo Black',sans-serif; font-size:17px; text-transform:lowercase; line-height:1.2; }
+  .rcard .rd{ font-size:13px; line-height:1.5; margin-top:7px; color:var(--muted); }
+  .rcard .rgo{ font-size:12px; font-weight:700; margin-top:11px; display:inline-block; }
+  .r-green{ border-left-color:var(--green); } .r-green .rt,.r-green .rgo{ color:var(--green); }
+  .r-sky{ border-left-color:var(--sky); } .r-sky .rt,.r-sky .rgo{ color:var(--sky); }
+  .r-hot{ border-left-color:var(--hot); } .r-hot .rt,.r-hot .rgo{ color:var(--hot); }
+  .r-yellow{ border-left-color:var(--yellow); } .r-yellow .rt,.r-yellow .rgo{ color:var(--yellow); }
+  .r-rose{ border-left-color:var(--rose); } .r-rose .rt,.r-rose .rgo{ color:var(--rose); }
+  .soon{ opacity:.55; }
+  .soon .rgo{ color:var(--muted)!important; }
+  .stagelabel{ font-size:11.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--muted); margin:34px 0 -8px; }
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="logo" href="./start.html">malti<span class="sl">/</span>plata</a>
+  <span class="navlinks">
+    <a href="./start.html" aria-current="page">start here</a>
+    <a href="./about.html" class="hide-sm">the name</a>
+    <a class="pill sm" href="./money-map.html">get the guide</a>
+  </span>
+</nav>
+
+<div class="wrap">
+
+  <header class="sec" style="padding-top:44px">
+    <span class="kick">start here</span>
+    <h1>what's happening <span class="hl">right now</span>?</h1>
+    <p class="lede">nobody wakes up wanting to learn about credit. you wake up with a <b>situation</b> — a job offer, a lease, a court date, a baby, a bad night. find yours below and we'll tell you what actually matters first.</p>
+  </header>
+
+  <section class="sec" style="padding-top:20px">
+    <div class="stagelabel">just starting out · 18–25</div>
+    <div class="rgrid">
+      <a class="rcard r-green" href="./money-map.html">
+        <div class="rt">i'm starting my first job</div>
+        <div class="rd">what a W-4 actually is, why your first paycheck is smaller than you thought, and the account to open before anything else.</div>
+        <div class="rgo">start with the money map →</div>
+      </a>
+      <a class="rcard r-sky" href="./license.html">
+        <div class="rt">i need my license</div>
+        <div class="rd">from zero — the permit, the documents, practice hours with no car, and fee help most people never ask for.</div>
+        <div class="rgo">getting your license →</div>
+      </a>
+      <div class="rcard r-yellow soon">
+        <div class="rt">i'm signing my first lease</div>
+        <div class="rd">what you're agreeing to, what a landlord can and can't do, and the deposit rules that get broken most.</div>
+        <div class="rgo">coming soon</div>
+      </div>
+    </div>
+
+    <div class="stagelabel">building · 25–40</div>
+    <div class="rgrid">
+      <div class="rcard r-hot soon">
+        <div class="rt">i'm negotiating pay</div>
+        <div class="rd">what to say, what not to answer, and how to find out what the role actually pays before you name a number.</div>
+        <div class="rgo">coming soon</div>
+      </div>
+      <a class="rcard r-green" href="./money-map.html">
+        <div class="rt">i'm moving in with someone</div>
+        <div class="rd">what stays in your name, what to keep separate, and the paperwork worth doing before you combine anything.</div>
+        <div class="rgo">the five that stay yours →</div>
+      </a>
+      <a class="rcard r-sky" href="./money-map.html">
+        <div class="rt">i got a ticket / a surprise bill</div>
+        <div class="rd">paying isn't always the move. plus the cushion that makes a bad month survivable.</div>
+        <div class="rgo">your options →</div>
+      </a>
+    </div>
+
+    <div class="stagelabel">raising · any age</div>
+    <div class="rgrid">
+      <a class="rcard r-rose" href="./money-map.html">
+        <div class="rt">i'm doing this alone with kids</div>
+        <div class="rd">head of household, the child credits, your W-4, and the 20 minutes of paperwork that protect them.</div>
+        <div class="rgo">the kids &amp; taxes layer →</div>
+      </a>
+      <div class="rcard r-yellow soon">
+        <div class="rt">i'm getting divorced</div>
+        <div class="rd">what to gather before the first meeting, what's actually split, and what nobody tells you about the house.</div>
+        <div class="rgo">coming soon</div>
+      </div>
+      <a class="rcard r-hot" href="./leaving.html">
+        <div class="rt">i need to leave</div>
+        <div class="rd">the quiet checklist — documents, an account of your own, and what to copy before anything changes.</div>
+        <div class="rgo">read this carefully →</div>
+      </a>
+    </div>
+
+    <div class="stagelabel">later chapters · 50+</div>
+    <div class="rgrid">
+      <div class="rcard r-sky soon">
+        <div class="rt">i'm divorcing after 50</div>
+        <div class="rd">retirement accounts, the rules on a spouse's social security, and why this is a different game than divorcing at 30.</div>
+        <div class="rgo">coming soon</div>
+      </div>
+      <div class="rcard r-green soon">
+        <div class="rt">my partner died</div>
+        <div class="rd">the first two weeks, what you're entitled to, and the accounts that don't transfer the way people assume.</div>
+        <div class="rgo">coming soon</div>
+      </div>
+      <div class="rcard r-rose soon">
+        <div class="rt">i'm starting over</div>
+        <div class="rd">rebuilding credit, income, and a life from a hard reset — one small thing at a time.</div>
+        <div class="rgo">coming soon</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>not sure where you fit?</h2>
+    <p class="lede">start with the money map. it's the five things that should be in your own name at <b>every</b> stage — the floor everything else is built on.</p>
+    <form class="emailform" data-capture method="post" novalidate>
+      <input class="emailin" type="email" name="email" required placeholder="your@email.com" aria-label="Email address" />
+      <button class="pill" type="submit">get the money map →</button>
+    </form>
+    <div class="microline">free, 3 pages, plain language — no spam, unsubscribe anytime.</div>
+  </section>
+
+</div>
+
+<aside class="floatcta">
+  <button class="fclose" aria-label="Close">&times;</button>
+  <div class="ft">get the money map — free</div>
+  <div class="fd">3 pages, plain language. what belongs in your name, and what to do first.</div>
+  <form class="emailform" data-capture method="post" novalidate>
+    <input class="emailin" type="email" name="email" required placeholder="your@email.com" aria-label="Email address" />
+    <button class="pill" type="submit">send it &rarr;</button>
+  </form>
+</aside>
+
+<footer class="footer">
+  <div class="footer-top">
+    <a class="logo" href="./start.html">malti<span class="sl">/</span>plata</a>
+    <span class="footer-links">
+      <a href="./start.html">start here</a><a href="./money-map.html">the money map</a>
+      <a href="./license.html">your license</a><a href="./about.html">the name</a>
+      <a href="https://www.instagram.com/maltiplata/">instagram</a>
+    </span>
+  </div>
+  <div class="footer-fine">the fine print (in plain words): maltiplata is education, not financial or legal advice. for your own situation, talk to a licensed pro. &copy; 2026 maltiplata.</div>
+</footer>
+
+<script>
+
+// ── EMAIL SETUP: paste your ConvertKit/Mailchimp form ACTION url below.
+// Empty = forms just hand over the PDF (works today, no capture yet).
+var FORM_ENDPOINT = "";
+var PDF = "./downloads/the-money-map-maltiplata.pdf";
+
+document.querySelectorAll("form[data-capture]").forEach(function(f){
+  f.addEventListener("submit", function(e){
+    if(!FORM_ENDPOINT){ e.preventDefault(); window.location.href = PDF; return; }
+    f.action = FORM_ENDPOINT;
+  });
+});
+
+(function(){
+  var box = document.querySelector(".floatcta");
+  if(!box) return;
+  // respect dismissal for the session
+  if(sessionStorage.getItem("mp_float_closed") === "1"){ box.classList.add("hide"); return; }
+  document.body.classList.add("has-float");
+
+  var shown = false;
+  function onScroll(){
+    if(shown) return;
+    if(window.scrollY > 520){ box.classList.add("show"); shown = true; }
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  box.querySelector(".fclose").addEventListener("click", function(){
+    box.classList.remove("show");
+    document.body.classList.remove("has-float");
+    try{ sessionStorage.setItem("mp_float_closed","1"); }catch(e){}
+    setTimeout(function(){ box.classList.add("hide"); }, 350);
+  });
+})();
+
+
+</script>
+</body>
+</html>
