@@ -388,7 +388,7 @@
 .mp-mission-punch b{ background:var(--yellow); padding:0 .18em; border-radius:4px; }
 
 /* ── maltiplata 2026 dark override ── */
-:root{ --ink:#0e0e10; --cream:#0e0e10; --paper:#17171a;
+:root{ --ink:#0e0e10; --cream:#f2f2f0; --paper:#17171a;
   --yellow:#f5e900; --pink:#00ccff; --lilac:#ff61b1; --leaf:#00e08a; --coral:#ff0066;
   --bg:#0e0e10; --surface:#17171a; --line:rgba(255,255,255,.14); --text:#f2f2f0; --rose:#ff0066; --green:#00e08a; }
 body{ background:#0e0e10; color:#f2f2f0; }
