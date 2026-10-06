@@ -7,7 +7,7 @@
 *,*::before,*::after{box-sizing:border-box;min-width:0}
 html,body{max-width:100%;overflow-x:hidden}
 body{margin:0;background:var(--cream);color:var(--ink);
-  font-family:"Space Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.62}
+  font-family:"Archivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.62}
 
 /* ---------- chrome (matches homepage exactly) ---------- */
 .a-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;
@@ -260,9 +260,9 @@ body{margin:0;background:var(--cream);color:var(--ink);
 }
 .fig-ink{ fill:var(--ink); }
 .fig-line{ fill:none; stroke:var(--ink); stroke-width:2.5; stroke-linecap:round; }
-.fig-t{ font-family:"Space Grotesk",sans-serif; font-size:13px; fill:var(--ink); }
+.fig-t{ font-family:"Archivo",sans-serif; font-size:13px; fill:var(--ink); }
 .fig-t-b{ font-family:"Archivo Black",sans-serif; font-size:15px; fill:var(--ink); }
-.fig-t-s{ font-family:"Space Grotesk",sans-serif; font-size:11px; fill:var(--ink); opacity:.7; }
+.fig-t-s{ font-family:"Archivo",sans-serif; font-size:11px; fill:var(--ink); opacity:.7; }
 
 /* ---------- photos: contained, captioned, credited (morning brew style) ---------- */
 .a-photo{ margin:34px 0; }
