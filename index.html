@@ -355,12 +355,12 @@ p{margin:0}
     <div class="map-copy">
       <p class="kick">free · 3 pages</p>
       <h2>get the money map.</h2>
-      <p>your own footing, the first three steps for every chapter, and where each dollar goes — 3 free pages.</p>
+      <p>your own footing, the first three steps for every chapter, and a money plan for the season you're in — 3 free pages.</p>
     </div>
-    <form id="map-form" novalidate>
+    <form id="map-form" data-capture novalidate>
       <label class="kick" for="email">your email</label>
       <div class="search-box">
-        <input id="email" name="email_address" type="email" required autocomplete="email" placeholder="you@email.com">
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
         <button type="submit">send it →</button>
       </div>
       <p class="note" id="map-note">no spam. unsubscribe anytime.</p>
@@ -386,7 +386,8 @@ p{margin:0}
   </div>
 </footer>
 
-<script src="./assets/search-index.js?v=d7477e46" defer></script>
+<script src="./assets/signup.js?v=c79006ea" defer></script>
+<script src="./assets/search-index.js?v=c79006ea" defer></script>
 <script>
 /* ── search: uses the site's existing index (assets/search-index.js) ── */
 (function(){
@@ -425,29 +426,7 @@ p{margin:0}
   document.addEventListener('click',function(e){ if(!form.contains(e.target)) list.hidden=true; });
 })();
 
-/* ── money map signup ──
-   Paste your Kit form ID below once your Kit account is set up
-   (Kit → Grow → Landing Pages & Forms → your form → Embed → the number in the form's URL).
-   Until then, the form simply hands people the PDF — it never pretends to collect an email. */
-(function(){
-  var KIT_FORM_ID = '';   // e.g. '1234567'
-  var PDF = './downloads/the-money-map-maltiplata.pdf';
-  var form=document.getElementById('map-form'), email=document.getElementById('email'), note=document.getElementById('map-note');
-  function done(msg){ form.innerHTML='<p class="kick">you\u2019re in \u2726</p><p class="done">'+msg+'</p>'; }
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!email.value || !email.checkValidity()){ note.textContent='that email doesn\u2019t look right \u2014 try again?'; email.focus(); return; }
-    if(!KIT_FORM_ID){
-      done('the money map is ready \u2014 <a href="'+PDF+'" download>download it here</a>. start with page 1, smallest thing first.');
-      return;
-    }
-    note.textContent='sending\u2026';
-    var body=new FormData(); body.append('email_address', email.value);
-    fetch('https://app.kit.com/forms/'+KIT_FORM_ID+'/subscriptions',{method:'POST',body:body,headers:{'Accept':'application/json'}})
-      .then(function(r){ if(!r.ok) throw new Error(r.status); done('check your inbox \u2014 the money map is on its way. (or <a href="'+PDF+'" download>grab it right now</a>.)'); })
-      .catch(function(){ note.innerHTML='something went sideways. <a href="'+PDF+'" download>download the map directly</a> and we\u2019ll sort the email later.'; });
-  });
-})();
+
 </script>
 </body>
 </html>

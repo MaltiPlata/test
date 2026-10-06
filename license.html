@@ -219,17 +219,6 @@ h2{ font-family:'Archivo Black',sans-serif; font-weight:400; font-size:clamp(25p
 </footer>
 
 <script>
-// ── EMAIL SETUP: paste your ConvertKit/Mailchimp form ACTION url below.
-// Empty = forms just hand over the PDF (works today, no capture yet).
-var FORM_ENDPOINT = "";
-var PDF = "./downloads/the-money-map-maltiplata.pdf";
-
-document.querySelectorAll("form[data-capture]").forEach(function(f){
-  f.addEventListener("submit", function(e){
-    if(!FORM_ENDPOINT){ e.preventDefault(); window.location.href = PDF; return; }
-    f.action = FORM_ENDPOINT;
-  });
-});
 
 (function(){
   var box = document.querySelector(".floatcta");
@@ -255,5 +244,6 @@ document.querySelectorAll("form[data-capture]").forEach(function(f){
 })();
 
 </script>
+<script src="./assets/signup.js?v=c79006ea" defer></script>
 </body>
 </html>
