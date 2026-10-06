@@ -32,9 +32,8 @@ KW={
  "topics/how-to-file-taxes.html":"tax taxes irs filing refund w2 1099 withholding",
  "topics/start-investing.html":"invest investing roth ira index fund 401k retirement stocks",
  "topics/how-to-build-credit.html":"credit score fico secured card utilization report",
- "wall/index.html":"stories wall reclaim anonymous community",
- "start/index.html":"start help where do i begin quiz guide me",
- "about/index.html":"about who founder trust sources team contact"}
+ "start.html":"start help where do i begin quiz guide me",
+ "about.html":"about who founder trust sources team contact"}
 
 cards=[]
 for t in T:
@@ -92,12 +91,11 @@ def scrape(folder):
 
 for t,d,u,k,kw in scrape('dictionary'): add(t,d,u,"word",k,kw)
 for t,d,u,k,kw in scrape('guides'):     add(t,d,u,"guide",k,kw)
-for t,d,u in [("where do i start?","tell us what's going on — we'll point you at the 2–3 things that help","start/index.html"),
-              ("about maltiplata","who's behind this, how we source everything, and how we make money","about/index.html"),
+for t,d,u in [("where do i start?","tell us what's going on — we'll point you at the 2–3 things that help","start.html"),
+              ("our story","how maltiplata started, how we source everything, and why it's free","about.html"),
               ("all topics","every money + legal topic, searchable","topics/index.html"),
               ("all guides","the full 26-guide library","guides/index.html"),
               ("the money dictionary","every confusing word, explained like you're 5","dictionary/index.html"),
-              ("the reclaim wall","anonymous stories from women who took their money back","wall/index.html"),
               ("women who went first","climbers, pilots, sailors, and the first woman on the floor of the NYSE","herstory/firsts.html"),
               ("then / now / next","the timeline of women's financial rights","herstory/index.html")]:
     add(t,d,u,"page",'',KW.get(u,''))
