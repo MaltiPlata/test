@@ -890,7 +890,7 @@ Site total: **75 pages · 0 broken links or images · 0 JS errors.**
 ## v32 — images, finally (and a share bug that was live the whole time)
 
 **`og-image.png` did not exist.** Every page referenced
-`https://maltiplata.netlify.app/og-image.png` and it 404'd — so every share on Instagram,
+`https://maltiplata.com/og-image.png` and it 404'd — so every share on Instagram,
 Pinterest, Facebook, or iMessage showed a blank preview. Built now: 1200×630, brand fonts,
 the headline with the tilted highlight, the one-line description, three feature pills.
 
