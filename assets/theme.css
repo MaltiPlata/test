@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════════════════════════════════
+   MALTIPLATA — LILAC & LIME THEME (single source of truth)
+   Loaded LAST on every guide, topic, dictionary and herstory page.
+   Replaces assets/theme-dark.css.
+
+   The original styles were built light-first on two tokens:
+     --ink   = text, rules, dark bands (nav, footer, buttons)
+     --cream = page background, text on dark bands
+   This file points those tokens at the new palette and flattens the
+   look: square corners, 2px plum rules, no floating shadows.
+   ═══════════════════════════════════════════════════════════════════ */
+:root{
+  --plum:#2A1840; --plum-soft:#4A3466; --purple:#5B3A8A;
+  --lilac:#C9B8FF; --lilac-pale:#F1ECFF; --lilac-mid:#E3DAFF;
+  --lime:#D4FF4F; --white:#FFFFFF;
+
+  /* legacy tokens → new palette */
+  --ink:#2A1840; --cream:#F1ECFF; --paper:#FFFFFF;
+  --yellow:#D4FF4F; --pink:#C9B8FF; --leaf:#D4FF4F; --coral:#C9B8FF;
+  --accent:#D4FF4F;
+  color-scheme:light;
+}
+html,body{background:var(--lilac-pale)!important;color:var(--plum)}
+body{font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif}
+::selection{background:var(--lime);color:var(--plum)}
+:focus-visible{outline:2px solid var(--purple);outline-offset:3px}
+
+/* flat & architectural: square corners, no floating shadows */
+*:not([class*="dot"]):not(#mp-menu-btn span){border-radius:0!important}
+*{box-shadow:none!important}
+
+/* ── chrome ─────────────────────────────────────────────────────── */
+.a-nav{background:var(--plum);color:var(--lilac-pale);border-bottom:1px solid rgba(241,236,255,.18)}
+.a-logo{color:var(--lilac-pale)}
+.a-logo .s{color:var(--lime)}
+.a-navlinks a{color:var(--lilac-pale);opacity:1}
+.a-navlinks a:hover{color:var(--lime)}
+.a-navlinks a.a-navcta{background:var(--lime);color:var(--plum);font-weight:800}
+.a-navlinks a.a-navcta:hover{background:var(--white);color:var(--plum);transform:none}
+.a-foot{background:var(--plum);color:var(--lilac);border-top:0}
+.a-foot a{color:var(--lilac-pale)}
+.a-foot a:hover{color:var(--lime)}
+
+/* ── hero card: keeps each page's accent, plum text ─────────────── */
+.a-hero-card{border:2px solid var(--plum)!important;color:var(--plum)}
+.a-hero-card a{color:var(--plum)}
+.a-kicker{background:var(--plum);color:var(--lime)}
+
+/* ── body copy ──────────────────────────────────────────────────── */
+.a-body p,.a-body li{color:var(--plum-soft)}
+.a-body strong,.a-body b,.a-body h2,.a-body h3{color:var(--plum)}
+.a-body a{color:var(--plum);text-decoration-color:var(--purple)}
+.a-body a:hover{background:var(--lime);color:var(--plum)}
+
+/* ── boxes: white with 2px plum rules ───────────────────────────── */
+.a-tldr{background:var(--plum);color:var(--lilac-pale);border:2px solid var(--plum)}
+.a-tldr *{color:inherit}
+.a-tldr li,.a-tldr p,.a-tldr em,.a-tldr a,.a-tldr span{color:var(--lilac-pale)!important}
+.a-tldr .a-tldr-label{color:var(--lime)!important}
+.a-tldr b,.a-tldr strong{color:var(--lime)}
+.a-call,.a-num,.a-tablewrap,.a-faq details,.a-side-box,.a-rel-card,.l-card,.l-search,.a-fig{
+  background:var(--white)!important;border:2px solid var(--plum)!important;color:var(--plum)}
+.a-call--accent{background:var(--lime)!important}
+.a-side-box--cta{background:var(--lime)!important}
+.a-btn{background:var(--plum);color:var(--lime);border:2px solid var(--plum)}
+.a-btn:hover{background:var(--purple);color:var(--lime)}
+.a-toc a{color:var(--plum-soft)}
+.a-toc a:hover{color:var(--plum);background:var(--lime)}
+th{background:var(--lilac-mid)!important;color:var(--plum)!important}
+td,th{border-color:rgba(42,24,64,.2)!important}
+mark,.a-hl{background:var(--lime);color:var(--plum)}
+
+/* ── index cards & filters ──────────────────────────────────────── */
+.l-card{--tint:var(--white)!important}
+.l-card:hover{background:var(--lime)!important}
+.l-kind,.a-rel-kind{background:var(--plum);color:var(--lime)}
+.l-fbtn{background:transparent;color:var(--plum);border:2px solid var(--plum)}
+.l-fbtn.on,.l-fbtn:hover{background:var(--plum);color:var(--lime)}
+
+/* ── inputs ─────────────────────────────────────────────────────── */
+input,select,textarea{color:var(--plum);background:var(--white);border-color:var(--plum)}
+input::placeholder,textarea::placeholder{color:#6B5A85}
+
+/* ── herstory & other pages built on home-enhance.css ───────────── */
+.nav,.footer,footer{background:var(--plum)!important;color:var(--lilac-pale)!important}
+.nav a,.footer a,footer a{color:var(--lilac-pale)}
+.nav a:hover,.footer a:hover,footer a:hover{color:var(--lime)}
+.logo-slash{color:var(--lime)!important}
