@@ -352,7 +352,7 @@
       'boring at all: <b>the number of choices you get to make.</b> Learn the thing. Change the ' +
       'career. Book the trip. Start the business. Marriage can be one of the things you build \u2014 ' +
       'it doesn\u2019t have to be the only one.</p>' +
-      '<a class="mp-mission-cta" href="./about/index.html">read the whole story \u2192</a>' +
+      '<a class="mp-mission-cta" href="./about.html">read the whole story \u2192</a>' +
       '</div>';
     anchor.parentNode.insertBefore(sec, anchor);
     return true;
@@ -366,7 +366,7 @@
     var host = anchor.parentNode;
     var bar = document.createElement('a');
     bar.id = 'mp-startbar';
-    bar.href = './start/index.html';
+    bar.href = './start.html';
     bar.innerHTML =
       '<span class="mp-sb-emoji">\uD83E\uDDED</span>' +
       '<span class="mp-sb-copy"><b>not sure where to start?</b>' +
@@ -418,7 +418,7 @@
     if (!done.dict) done.dict = makeCarousel('dictionary', '.dictionary-card',
       { delay: 4200, allHref: './dictionary/index.html', allLabel: 'all words →' });
     if (!done.wall) done.wall = makeCarousel('reclaim', '.reclaim-card',
-      { delay: 5200, allHref: './wall/index.html', allLabel: 'the whole wall →' });
+      { delay: 5200, allHref: './index.html#reclaim', allLabel: 'the whole wall →' });
     if (!done.dictlink) done.dictlink = linkDictCards();
     if (!done.startbar) done.startbar = startBanner();
     if (!done.mission) done.mission = missionBand();
@@ -429,7 +429,7 @@
       bg:'var(--pink)', kicker:'the reclaim wall',
       head:'someone taught us money was private. we\u2019re done keeping secrets.',
       body:'Anonymous stories about what money was never explained \u2014 a salary nobody would name, a loan nobody explained, a bill somebody hid \u2014 and exactly what people did about it. Yours can be one of them.',
-      cta:'read the wall \u2192', href:'./wall/index.html' });
+      cta:'read the wall \u2192', href:'./index.html#reclaim' });
   }
   function start() { tick(); [250, 700, 1400, 2500].forEach(function (t) { setTimeout(tick, t); }); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);

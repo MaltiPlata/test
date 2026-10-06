@@ -6,12 +6,12 @@
   'use strict';
 
   var LINKS = [
-    ['start here', 'start/index.html'],
+    ['start here', 'start.html'],
     ['topics', 'topics/index.html'],
     ['guides', 'guides/index.html'],
     ['dictionary', 'dictionary/index.html'],
     ['herstory', 'herstory/index.html'],
-    ['about', 'about/index.html']
+    ['about', 'about.html']
   ];
 
   /* how many folders deep are we? drives the ../ prefix */
