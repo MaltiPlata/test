@@ -1,316 +1,378 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>start here — what's happening right now? · maltiplata</title>
-<meta name="description" content="find what you need by what's actually happening in your life right now — first job, a lease, a license, a baby, a divorce, starting over." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>find your chapter — maltiplata</title>
+<meta name="description" content="divorce, leaving, starting over, a new job, kids on your own, sudden money — pick what you're going through and get your first three steps. free, plain language.">
+<link rel="canonical" href="https://maltiplata.com/start.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maltiplata.com/start.html">
+<meta property="og:title" content="whatever you're going through — here are your first three steps.">
+<meta property="og:description" content="divorce, leaving, starting over, a new job, kids on your own, sudden money. free, plain language, nothing to sell you.">
+<meta property="og:image" content="https://maltiplata.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2A1840">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-
-:root{
-  --bg:#F1ECFF; --surface:#FFFFFF; --line:rgba(42,24,64,.22);
-  --cream:#2A1840; --muted:#4A3466;
-  --accent-text:#5B3A8A; --rose:#2A1840; --green:#D4FF4F; --yellow:#D4FF4F; --sky:#C9B8FF; --hot:#C9B8FF;
-}
-*{ box-sizing:border-box; }
-html{ -webkit-text-size-adjust:100%; }
-html,body{ max-width:100%; overflow-x:hidden; }
-body{ margin:0; background:var(--bg); color:var(--cream);
-  font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased; }
-a{ color:inherit; }
-img{ max-width:100%; }
-.wrap{ max-width:1080px; margin:0 auto; padding:0 20px; }
-
-.kick{ display:inline-flex; align-items:center; gap:9px; font-size:12px; font-weight:700;
-  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
-.kick::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--sky); flex:none; }
-.hl{ background:var(--green); color:#0e0e10; padding:0.02em 10px 0.16em;
-  box-decoration-break:clone; -webkit-box-decoration-break:clone; border-radius:6px; }
-
-.pill{ display:inline-flex; align-items:center; justify-content:center; gap:8px;
-  background:var(--rose); color:#fff; font-family:'Archivo',sans-serif; font-weight:700;
-  font-size:16px; text-decoration:none; padding:15px 28px; border-radius:999px; border:none;
-  cursor:pointer; min-height:50px; box-shadow:0 10px 26px -10px rgba(255,0,102,.75);
-  transition:transform .13s ease; }
-.pill:hover{ transform:translateY(-2px); }
-.pill.sm{ font-size:14px; padding:11px 18px; min-height:44px; box-shadow:none; }
-
+:root{--plum:#2A1840;--plum-soft:#4A3466;--lilac:#C9B8FF;--lilac-pale:#F1ECFF;--lilac-mid:#E3DAFF;--lime:#D4FF4F;--purple:#5B3A8A;--white:#fff;--rule:2px solid var(--plum)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+section[id],details[id]{scroll-margin-top:84px}
+body{margin:0;background:var(--lilac-pale);color:var(--plum);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--plum)}a:hover{color:var(--purple)}
+:focus-visible{outline:2px solid var(--purple);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--lime)}
+.wrap{max-width:1100px;margin:0 auto;padding-left:32px;padding-right:32px}
+.kick{margin:0;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+h1,h2,h3,p{margin:0}
 /* nav */
-.nav{ position:sticky; top:0; z-index:60; display:flex; align-items:center; justify-content:space-between;
-  gap:12px; min-height:64px; padding:10px 20px; background:rgba(241,236,255,.94);
-  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
-.logo{ font-family:'Archivo Black',sans-serif; font-size:20px; text-decoration:none; color:var(--cream); white-space:nowrap; }
-.logo .sl{ color:var(--rose); }
-.navlinks{ display:flex; align-items:center; gap:20px; }
-.navlinks a{ font-size:13.5px; font-weight:600; text-decoration:none; color:var(--muted); white-space:nowrap; }
-.navlinks a:hover, .navlinks a[aria-current]{ color:var(--cream); }
-
-h1{ font-family:'Archivo Black',sans-serif; font-weight:400; font-size:clamp(34px,7vw,62px);
-  line-height:1.03; letter-spacing:-.02em; text-transform:lowercase; margin:14px 0 0; }
-h2{ font-family:'Archivo Black',sans-serif; font-weight:400; font-size:clamp(25px,4.6vw,40px);
-  line-height:1.06; letter-spacing:-.02em; text-transform:lowercase; margin:12px 0 0; }
-.lede{ font-size:clamp(15px,2.2vw,18px); line-height:1.55; max-width:60ch; margin:16px 0 0; color:var(--muted); }
-.lede b{ color:var(--cream); }
-.sec{ padding:52px 0 0; }
-
-/* cards */
-.cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-top:22px; }
-.card{ border:1px solid var(--line); border-top:3px solid; border-radius:14px; padding:18px 16px; background:var(--surface); }
-.card .bn{ display:inline-grid; place-items:center; width:32px; height:32px; border-radius:50%;
-  color:#0e0e10; font-family:'Archivo Black',sans-serif; font-size:14px; margin-bottom:9px; }
-.card .bt{ font-family:'Archivo Black',sans-serif; font-size:15.5px; text-transform:lowercase; line-height:1.2; }
-.card .bd{ font-size:13px; line-height:1.5; margin-top:6px; color:var(--muted); }
-.c-green{ border-top-color:var(--green); } .c-green .bn{ background:var(--green); }
-.c-sky{ border-top-color:var(--sky); } .c-sky .bn{ background:var(--sky); }
-.c-hot{ border-top-color:var(--hot); } .c-hot .bn{ background:var(--hot); }
-.c-yellow{ border-top-color:var(--yellow); } .c-yellow .bn{ background:var(--yellow); }
-.c-rose{ border-top-color:var(--rose); } .c-rose .bn{ background:var(--rose); color:#fff; }
-
-/* inline email form */
-.emailform{ display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
-.emailin{ flex:1 1 240px; min-width:0; border:1px solid rgba(255,255,255,.3); background:rgba(255,255,255,.07);
-  color:var(--cream); border-radius:999px; padding:14px 20px; font-size:16px;
-  font-family:'Archivo',sans-serif; outline:none; min-height:50px; }
-.emailin::placeholder{ color:#6B5A85; }
-.microline{ font-size:12.5px; color:var(--muted); margin-top:10px; line-height:1.45; }
-
-/* FLOATING CAPTURE */
-.floatcta{ position:fixed; right:22px; bottom:22px; z-index:90; width:330px; max-width:calc(100vw - 32px);
-  background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--green);
-  border-radius:16px; padding:18px 18px 16px; box-shadow:0 24px 60px -18px rgba(0,0,0,.85);
-  transform:translateY(160%); transition:transform .35s cubic-bezier(.2,.8,.2,1); }
-.floatcta.show{ transform:translateY(0); }
-.floatcta.hide{ display:none; }
-.floatcta .ft{ font-family:'Archivo Black',sans-serif; font-size:16px; text-transform:lowercase; padding-right:26px; }
-.floatcta .fd{ font-size:12.5px; color:var(--muted); margin-top:5px; line-height:1.45; }
-.floatcta .emailform{ margin-top:12px; gap:8px; }
-.floatcta .emailin{ flex:1 1 100%; padding:12px 16px; min-height:46px; font-size:16px; }
-.floatcta .pill{ flex:1 1 100%; font-size:14px; padding:12px 18px; min-height:46px; box-shadow:none; }
-.fclose{ position:absolute; top:10px; right:10px; width:30px; height:30px; border-radius:50%;
-  border:none; background:rgba(255,255,255,.08); color:var(--cream); font-size:16px; line-height:1;
-  cursor:pointer; display:grid; place-items:center; }
-.fclose:hover{ background:rgba(255,255,255,.16); }
-
+.nav{background:var(--plum);color:var(--lilac-pale);border-bottom:1px solid rgba(241,236,255,.18);position:sticky;top:0;z-index:20}
+.nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-top:14px;padding-bottom:14px}
+.logo{text-decoration:none;font-weight:900;font-size:22px;letter-spacing:-.03em;color:var(--lilac-pale)}
+.logo span{color:var(--lime)}
+.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-size:14px;font-weight:600}
+.nav-links a{text-decoration:none;color:var(--lilac-pale)}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--lime)}
+.nav-links .cta{background:var(--lime);color:var(--plum);font-weight:800;padding:0 18px;min-height:44px;display:inline-flex;align-items:center}
+.nav-links .cta:hover{background:var(--white);color:var(--plum)}
+/* hero */
+.hero{background:var(--plum);color:var(--lilac-pale)}
+.hero .wrap{padding-top:64px;padding-bottom:56px;display:flex;flex-direction:column;gap:20px}
+.hero .kick{color:var(--lilac)}
+.hero h1{font-size:clamp(40px,6vw,76px);font-weight:900;line-height:.96;letter-spacing:-.045em;max-width:900px}
+.hl{background:var(--lime);color:var(--plum);padding:0 .1em}
+.hero p.sub{font-size:18px;line-height:1.55;max-width:640px;color:var(--lilac-mid)}
+.jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.jump a{text-decoration:none;color:var(--plum);background:var(--lilac-pale);border:2px solid var(--lilac-pale);padding:12px 16px;font-weight:800;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+.jump a:hover{background:var(--lime);border-color:var(--lime)}
+/* footing */
+.footing{background:var(--lime);border-bottom:var(--rule)}
+.footing .wrap{padding-top:44px;padding-bottom:44px;display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;justify-content:space-between}
+.footing-copy{flex:1 1 340px;display:flex;flex-direction:column;gap:10px}
+.footing h2{font-size:clamp(26px,3.2vw,36px);font-weight:900;letter-spacing:-.035em;line-height:1}
+.footing-copy p{font-size:16px;line-height:1.55}
+.footing ol{flex:2 1 520px;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:var(--rule);background:var(--white)}
+.footing li{padding:18px;border-right:var(--rule);display:flex;flex-direction:column;gap:8px}
+.footing li:last-child{border-right:0}
+.footing li b{font-size:30px;font-weight:900;line-height:1}
+.footing li span{font-size:15px;line-height:1.45;font-weight:600}
+/* groups */
+.grp{border-bottom:var(--rule)}
+.grp .wrap{padding-top:56px;padding-bottom:56px;display:flex;flex-direction:column;gap:22px}
+.grp-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+.grp-head h2{font-size:clamp(30px,4vw,46px);font-weight:900;letter-spacing:-.04em;line-height:1}
+.grp-head p{font-size:16px;color:var(--plum-soft)}
+.list{display:flex;flex-direction:column;gap:12px}
+.ch{background:var(--white);border:var(--rule)}
+.ch summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) 44px;grid-template-areas:"t p" "o p";gap:4px 16px;padding:18px 20px;align-items:center;border-left:14px solid var(--c)}
+.ch summary::-webkit-details-marker{display:none}
+.ch summary:hover{background:var(--lilac-pale)}
+.ch .t{grid-area:t;font-size:clamp(20px,2.4vw,26px);font-weight:900;letter-spacing:-.03em}
+.ch .o{grid-area:o;font-size:15px;line-height:1.45;color:var(--plum-soft)}
+.plus{grid-area:p;width:44px;height:44px;border:var(--rule);position:relative;justify-self:end}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:16px;height:2px;background:var(--plum);transform:translate(-50%,-50%)}
+.plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.ch[open] .plus{background:var(--plum)}
+.ch[open] .plus::before{background:var(--lime)}
+.ch[open] .plus::after{display:none}
+.ch[open] summary{border-bottom:var(--rule)}
+.body{padding:22px 20px 24px 34px;display:flex;flex-direction:column;gap:14px}
+.body .kick{color:var(--purple)}
+.safe{background:var(--plum);color:var(--lilac-pale);padding:12px 14px;font-size:14.5px;line-height:1.5}
+.safe b{color:var(--lime)}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.steps li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;align-items:start}
+.steps .n{width:40px;height:40px;background:var(--lime);border:var(--rule);display:grid;place-items:center;font-weight:900;font-size:18px}
+.steps p{font-size:16.5px;line-height:1.55;padding-top:8px}
+.more{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;padding-top:14px;border-top:1.5px solid rgba(42,24,64,.2)}
+.more .kick{width:100%}
+.more a{font-weight:800;font-size:15px;text-decoration:none;border-bottom:2px solid var(--plum);padding:6px 0}
+.more a:hover{background:var(--lime)}
+.share{align-self:flex-start;background:transparent;border:0;padding:6px 0;font:inherit;font-size:13.5px;font-weight:700;color:var(--purple);text-decoration:underline;cursor:pointer;min-height:44px}
+.share.done{color:var(--plum);text-decoration:none}
+/* map cta */
+.map{background:var(--plum);color:var(--lilac-pale)}
+.map .wrap{padding-top:56px;padding-bottom:56px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.map h2{font-size:clamp(30px,4vw,46px);font-weight:900;letter-spacing:-.04em;line-height:1}
+.map p{font-size:17px;line-height:1.55;color:var(--lilac-mid);max-width:560px;margin-top:10px}
+.btn-lime{text-decoration:none;background:var(--lime);color:var(--plum);font-weight:900;font-size:17px;padding:0 24px;min-height:52px;display:inline-flex;align-items:center}
+.btn-lime:hover{background:var(--white);color:var(--plum)}
 /* footer */
-.footer{ border-top:1px solid var(--line); color:var(--muted); padding:28px 20px 40px;
-  font-size:12px; line-height:1.6; margin-top:56px; }
-.footer-top{ display:flex; justify-content:space-between; align-items:center; gap:14px;
-  flex-wrap:wrap; margin-bottom:12px; color:var(--cream); max-width:1080px; margin-inline:auto; }
-.footer-links{ display:flex; gap:16px; font-weight:600; font-size:13px; flex-wrap:wrap; }
-.footer-links a{ text-decoration:none; }
-.footer-fine{ max-width:70ch; margin:0 auto; }
-
+.foot{background:var(--plum);color:var(--lilac-pale);border-top:1px solid rgba(241,236,255,.18)}
+.foot .wrap{padding-top:32px;padding-bottom:96px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+.foot p{font-size:13px;line-height:1.55;color:var(--lilac);max-width:640px;margin-top:10px}
+.foot nav{display:flex;flex-wrap:wrap;gap:12px 20px;font-size:14px;font-weight:700}
+.foot nav a{text-decoration:none;color:var(--lilac-pale)}
+/* quick exit */
+.exit{position:fixed;right:16px;bottom:16px;z-index:50;background:var(--plum);color:var(--lime);border:2px solid var(--lime);font:inherit;font-weight:900;font-size:15px;padding:0 18px;min-height:48px;cursor:pointer}
+.exit:hover{background:var(--lime);color:var(--plum)}
 @media (max-width:760px){
-  .navlinks{ gap:14px; }
-.navlinks a.hide-sm{ display:none; }
-  .sec{ padding:40px 0 0; }
-  /* floating CTA becomes a bottom bar */
-  .floatcta{ right:0; left:0; bottom:0; width:100%; max-width:none; border-radius:16px 16px 0 0;
-    border-left:none; border-right:none; border-bottom:none; padding:16px 16px calc(16px + env(safe-area-inset-bottom)); }
-  .floatcta .emailform{ flex-wrap:nowrap; }
-  .floatcta .emailin{ flex:1 1 auto; }
-  .floatcta .pill{ flex:0 0 auto; padding:12px 16px; }
-  body.has-float{ padding-bottom:150px; }
+  .wrap{padding-left:18px;padding-right:18px}
+  .nav{position:static} section[id],details[id]{scroll-margin-top:0}
+  .nav-links .hide-sm{display:none}
+  .footing ol{grid-template-columns:1fr}
+  .footing li{border-right:0;border-bottom:var(--rule)}
+  .footing li:last-child{border-bottom:0}
+  .body{padding:18px 16px 20px}
+  .ch summary{padding:16px;border-left-width:10px}
 }
-
-
-
-  /* situation router */
-  .rgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; margin-top:24px; }
-  .rcard{ display:block; text-decoration:none; border:1px solid var(--line); border-left:4px solid;
-    border-radius:14px; padding:20px 18px; background:var(--surface); transition:transform .14s ease, border-color .14s ease; }
-  .rcard:hover{ transform:translateY(-3px); }
-  .rcard .rt{ font-family:'Archivo Black',sans-serif; font-size:17px; text-transform:lowercase; line-height:1.2; }
-  .rcard .rd{ font-size:13px; line-height:1.5; margin-top:7px; color:var(--muted); }
-  .rcard .rgo{ font-size:12px; font-weight:700; margin-top:11px; display:inline-block; }
-  .r-green{ border-left-color:var(--green); } .r-green .rt,.r-green .rgo{ color:var(--accent-text); }
-  .r-sky{ border-left-color:var(--sky); } .r-sky .rt,.r-sky .rgo{ color:var(--accent-text); }
-  .r-hot{ border-left-color:var(--hot); } .r-hot .rt,.r-hot .rgo{ color:var(--accent-text); }
-  .r-yellow{ border-left-color:var(--yellow); } .r-yellow .rt,.r-yellow .rgo{ color:var(--accent-text); }
-  .r-rose{ border-left-color:var(--rose); } .r-rose .rt,.r-rose .rgo{ color:var(--rose); }
-  .soon{ opacity:.55; }
-  .soon .rgo{ color:var(--muted)!important; }
-  .stagelabel{ font-size:11.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
-    color:var(--muted); margin:34px 0 -8px; }
-
-.navlinks a.pill, .navlinks a.pill:hover{ color:#fff; }
-/* flat-2026: square corners, no glow (matches the lilac & lime look) */
-*:not([class*="dot"]){border-radius:0!important}
-*{box-shadow:none!important;text-shadow:none!important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-
-<nav class="nav">
-  <a class="logo" href="./start.html">malti<span class="sl">/</span>plata</a>
-  <span class="navlinks">
-    <a href="./start.html" aria-current="page">start here</a>
-    <a href="./about.html" class="hide-sm">the name</a>
-    <a class="pill sm" href="./money-map.html">get the guide</a>
-  </span>
-</nav>
-
-<div class="wrap">
-
-  <header class="sec" style="padding-top:44px">
-    <span class="kick">start here</span>
-    <h1>what's happening <span class="hl">right now</span>?</h1>
-    <p class="lede">nobody wakes up wanting to learn about credit. you wake up with a <b>situation</b> — a job offer, a lease, a court date, a baby, a bad night. find yours below and we'll tell you what actually matters first.</p>
-  </header>
-
-  <section class="sec" style="padding-top:20px">
-    <div class="stagelabel">just starting out · 18–25</div>
-    <div class="rgrid">
-      <a class="rcard r-green" href="./money-map.html">
-        <div class="rt">i'm starting my first job</div>
-        <div class="rd">what a W-4 actually is, why your first paycheck is smaller than you thought, and the account to open before anything else.</div>
-        <div class="rgo">start with the money map →</div>
-      </a>
-      <a class="rcard r-sky" href="./license.html">
-        <div class="rt">i need my license</div>
-        <div class="rd">from zero — the permit, the documents, practice hours with no car, and fee help most people never ask for.</div>
-        <div class="rgo">getting your license →</div>
-      </a>
-      <div class="rcard r-yellow soon">
-        <div class="rt">i'm signing my first lease</div>
-        <div class="rd">what you're agreeing to, what a landlord can and can't do, and the deposit rules that get broken most.</div>
-        <div class="rgo">coming soon</div>
-      </div>
-    </div>
-
-    <div class="stagelabel">building · 25–40</div>
-    <div class="rgrid">
-      <div class="rcard r-hot soon">
-        <div class="rt">i'm negotiating pay</div>
-        <div class="rd">what to say, what not to answer, and how to find out what the role actually pays before you name a number.</div>
-        <div class="rgo">coming soon</div>
-      </div>
-      <a class="rcard r-green" href="./money-map.html">
-        <div class="rt">i'm moving in with someone</div>
-        <div class="rd">what stays in your name, what to keep separate, and the paperwork worth doing before you combine anything.</div>
-        <div class="rgo">the five that stay yours →</div>
-      </a>
-      <a class="rcard r-sky" href="./money-map.html">
-        <div class="rt">i got a ticket / a surprise bill</div>
-        <div class="rd">paying isn't always the move. plus the cushion that makes a bad month survivable.</div>
-        <div class="rgo">your options →</div>
-      </a>
-    </div>
-
-    <div class="stagelabel">raising · any age</div>
-    <div class="rgrid">
-      <a class="rcard r-rose" href="./money-map.html">
-        <div class="rt">i'm doing this alone with kids</div>
-        <div class="rd">head of household, the child credits, your W-4, and the 20 minutes of paperwork that protect them.</div>
-        <div class="rgo">the kids &amp; taxes layer →</div>
-      </a>
-      <div class="rcard r-yellow soon">
-        <div class="rt">i'm getting divorced</div>
-        <div class="rd">what to gather before the first meeting, what's actually split, and what nobody tells you about the house.</div>
-        <div class="rgo">coming soon</div>
-      </div>
-      <a class="rcard r-hot" href="./leaving.html">
-        <div class="rt">i need to leave</div>
-        <div class="rd">the quiet checklist — documents, an account of your own, and what to copy before anything changes.</div>
-        <div class="rgo">read this carefully →</div>
-      </a>
-    </div>
-
-    <div class="stagelabel">later chapters · 50+</div>
-    <div class="rgrid">
-      <div class="rcard r-sky soon">
-        <div class="rt">i'm divorcing after 50</div>
-        <div class="rd">retirement accounts, the rules on a spouse's social security, and why this is a different game than divorcing at 30.</div>
-        <div class="rgo">coming soon</div>
-      </div>
-      <div class="rcard r-green soon">
-        <div class="rt">my partner died</div>
-        <div class="rd">the first two weeks, what you're entitled to, and the accounts that don't transfer the way people assume.</div>
-        <div class="rgo">coming soon</div>
-      </div>
-      <div class="rcard r-rose soon">
-        <div class="rt">i'm starting over</div>
-        <div class="rd">rebuilding credit, income, and a life from a hard reset — one small thing at a time.</div>
-        <div class="rgo">coming soon</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec">
-    <h2>not sure where you fit?</h2>
-    <p class="lede">start with the money map. it's the five things that should be in your own name at <b>every</b> stage — the floor everything else is built on.</p>
-    <form class="emailform" data-capture method="post" novalidate>
-      <input class="emailin" type="email" name="email" required placeholder="your@email.com" aria-label="Email address" />
-      <button class="pill" type="submit">get the money map →</button>
-    </form>
-    <div class="microline">free, 3 pages, plain language — no spam, unsubscribe anytime.</div>
-  </section>
-
-</div>
-
-<aside class="floatcta">
-  <button class="fclose" aria-label="Close">&times;</button>
-  <div class="ft">get the money map — free</div>
-  <div class="fd">3 pages, plain language. what belongs in your name, and what to do first.</div>
-  <form class="emailform" data-capture method="post" novalidate>
-    <input class="emailin" type="email" name="email" required placeholder="your@email.com" aria-label="Email address" />
-    <button class="pill" type="submit">send it &rarr;</button>
-  </form>
-</aside>
-
-<footer class="footer">
-  <div class="footer-top">
-    <a class="logo" href="./start.html">malti<span class="sl">/</span>plata</a>
-    <span class="footer-links">
-      <a href="./start.html">start here</a><a href="./money-map.html">the money map</a>
-      <a href="./license.html">your license</a><a href="./about.html">the name</a>
-      <a href="https://www.instagram.com/maltiplata/">instagram</a>
-    </span>
+<header class="nav dark">
+  <div class="wrap">
+    <a class="logo" href="./">malti<span>/</span>plata</a>
+    <nav class="nav-links" aria-label="main">
+      <a href="./start.html" aria-current="page">find your chapter</a>
+      <a href="./guides/index.html">guides</a>
+      <a class="hide-sm" href="./dictionary/index.html">dictionary</a>
+      <a class="hide-sm" href="./about.html">our story</a>
+      <a class="cta" href="./money-map.html">get the money map →</a>
+    </nav>
   </div>
-  <div class="footer-fine">the fine print (in plain words): maltiplata is education, not financial or legal advice. for your own situation, talk to a licensed pro. &copy; 2026 maltiplata.</div>
+</header>
+
+<main>
+<section class="hero dark">
+  <div class="wrap">
+    <p class="kick">find your chapter</p>
+    <h1>whatever you're going through — here are your <span class="hl">first three steps.</span></h1>
+    <p class="sub">nobody wakes up wanting to learn about credit. you wake up with a situation. pick what's happening, open it, and we'll give you the first three things to do — and where to go next. free, plain language, nothing to sell you.</p>
+    <nav class="jump" aria-label="jump to a group"><a href="#g-ending">something is ending</a><a href="#g-starting">starting something new</a><a href="#g-caring">taking care of people</a><a href="#g-happened">something just happened</a></nav>
+  </div>
+</section>
+
+<section class="footing" aria-labelledby="footing-h">
+  <div class="wrap">
+    <div class="footing-copy">
+      <p class="kick">no matter the chapter</p>
+      <h2 id="footing-h">first, get your own footing.</h2>
+      <p>almost every hard chapter starts with the same three things. do these first, in any order.</p>
+    </div>
+    <ol>
+      <li><b>1</b><span>an account in your name only</span></li>
+      <li><b>2</b><span>copies of your documents, somewhere only you can reach</span></li>
+      <li><b>3</b><span>a small cushion that's yours — start with $500</span></li>
+    </ol>
+    <p style="flex-basis:100%;font-size:15px;font-weight:700">want it on paper? <a href="./downloads/maltiplata-my-own-file.pdf" download>print "my own file" — 6 free pages to fill in and keep ↓</a></p>
+  </div>
+</section>
+
+  <section class="grp" id="g-ending" aria-labelledby="h-ending">
+    <div class="wrap">
+      <div class="grp-head"><h2 id="h-ending">something is ending</h2><p>a marriage, a relationship, a life you shared.</p></div>
+      <div class="list">
+      <details class="ch" id="divorce" style="--c:#C9B8FF">
+        <summary><span class="t">i'm getting divorced</span><span class="o">what to gather, what to open, and what to check before you sign anything.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>copy every statement</b> — bank, retirement, mortgage, debts, and the last 3 years of tax returns. copies are enough.</p></li><li><span class="n">2</span><p><b>open an account in your name only</b> and pull your free credit report, so you know exactly what's in your name.</p></li><li><span class="n">3</span><p><b>list what you own and owe</b>, and check every beneficiary before you sign anything.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./topics/divorce-money-checklist.html">the divorce money checklist →</a><a href="./topics/beneficiary-designations.html">beneficiary designations →</a><a href="./topics/how-to-build-credit.html">how to build credit →</a></div>
+          <button type="button" class="share" data-id="divorce">copy link to this chapter</button>
+        </div>
+      </details>
+      <details class="ch" id="leaving" style="--c:#C9B8FF">
+        <summary><span class="t">i need to leave — quietly</span><span class="o">safety first, then your documents, then money that's only yours.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="safe">if someone can see this device, use a private window. the <b>quick exit</b> button (bottom right) leaves instantly.</p><p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>safety first.</b> call 800-799-7233 or text START to 88788 — an advocate can build a safety plan with you, free and confidential.</p></li><li><span class="n">2</span><p><b>quietly copy your documents</b> — IDs, birth certificates, account info — and keep them where only you can reach them.</p></li><li><span class="n">3</span><p><b>start a small amount of money that's only yours</b>, even $20 at a time, somewhere he can't see.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./leaving.html">the quiet checklist →</a><a href="./topics/financial-abuse.html">financial abuse, explained →</a></div>
+          <button type="button" class="share" data-id="leaving">copy link to this chapter</button>
+        </div>
+      </details>
+      <details class="ch" id="after-50" style="--c:#C9B8FF">
+        <summary><span class="t">i'm divorcing after 50</span><span class="o">retirement money and social security matter more than the house.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>get every retirement account on paper</b> — 401(k)s, IRAs, pensions. these are often the biggest assets, not the house.</p></li><li><span class="n">2</span><p><b>if you were married 10+ years</b>, you may be able to claim social security on your ex's record. check before you agree to anything.</p></li><li><span class="n">3</span><p><b>ask for a QDRO</b> (the court order that splits a 401(k) or pension) so your share moves without taxes or penalties.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./topics/social-security-for-women.html">social security for women →</a><a href="./topics/divorce-money-checklist.html">the divorce money checklist →</a><a href="./topics/old-401k-rollover.html">rolling over an old 401(k) →</a></div>
+          <button type="button" class="share" data-id="after-50">copy link to this chapter</button>
+        </div>
+      </details>
+      <details class="ch" id="loss" style="--c:#C9B8FF">
+        <summary><span class="t">my partner died</span><span class="o">the first weeks, what you're entitled to, and what can wait.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>breathe — most decisions can wait.</b> don't sell, move, or sign anything big for a few months unless you have to.</p></li><li><span class="n">2</span><p><b>order several certified death certificates</b>; banks, insurers, and agencies each want one.</p></li><li><span class="n">3</span><p><b>call social security</b> about survivor benefits, and check every account's beneficiary — those pass outside the will.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./topics/social-security-for-women.html">social security for women →</a><a href="./topics/beneficiary-designations.html">beneficiary designations →</a><a href="./guides/sudden-money-what-to-do.html">sudden money: what to do →</a></div>
+          <button type="button" class="share" data-id="loss">copy link to this chapter</button>
+        </div>
+      </details>
+      </div>
+    </div>
+  </section>
+  <section class="grp" id="g-starting" aria-labelledby="h-starting">
+    <div class="wrap">
+      <div class="grp-head"><h2 id="h-starting">starting something new</h2><p>a job, a home, a business — or starting over.</p></div>
+      <div class="list">
+      <details class="ch" id="back-to-work" style="--c:#D4FF4F">
+        <summary><span class="t">i'm going back to work</span><span class="o">after kids, caregiving, or a long break.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>write down what you actually did</b> while you were away — caregiving, volunteering, running a household are real skills.</p></li><li><span class="n">2</span><p><b>know your number</b> before the first interview, so you don't anchor low.</p></li><li><span class="n">3</span><p><b>negotiate the first offer</b> — every raise after is built on it.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./topics/caregiving-career-break.html">after a caregiving career break →</a><a href="./guides/how-to-negotiate-your-salary.html">how to negotiate your salary →</a></div>
+          <button type="button" class="share" data-id="back-to-work">copy link to this chapter</button>
+        </div>
+      </details>
+      <details class="ch" id="first-job" style="--c:#D4FF4F">
+        <summary><span class="t">i'm starting my first job</span><span class="o">the W-4, the paycheck, and the account to open first.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>fill out your W-4</b> carefully — it decides whether you owe or get a refund in april.</p></li><li><span class="n">2</span><p><b>grab the 401(k) match</b> if there is one. it's part of your pay.</p></li><li><span class="n">3</span><p><b>open your own savings account</b> and send a little from every check there automatically.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./topics/w4-explained.html">the W-4, explained →</a><a href="./guides/your-paystub-decoded.html">your paystub, decoded →</a><a href="./guides/where-your-paycheck-actually-goes.html">where your paycheck goes →</a></div>
+          <button type="button" class="share" data-id="first-job">copy link to this chapter</button>
+        </div>
+      </details>
+      <details class="ch" id="first-place" style="--c:#D4FF4F">
+        <summary><span class="t">i'm signing my first lease</span><span class="o">what you're agreeing to, and how to get your deposit back.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>read the whole lease</b> — fees, renewal, who fixes what. ask before you sign, not after.</p></li><li><span class="n">2</span><p><b>photograph everything on move-in day</b> and email the photos to yourself and the landlord.</p></li><li><span class="n">3</span><p><b>get renters insurance</b> — it's usually cheap, and it covers your stuff, not just theirs.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./guides/your-first-apartment.html">your first apartment →</a></div>
+          <button type="button" class="share" data-id="first-place">copy link to this chapter</button>
+        </div>
+      </details>
+      <details class="ch" id="business" style="--c:#D4FF4F">
+        <summary><span class="t">i'm starting a business</span><span class="o">later in life counts. so does a side hustle.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>test the idea before you spend</b> — and keep business money in its own account from day one.</p></li><li><span class="n">2</span><p><b>set up the basics</b>: sole proprietor or LLC, and a free EIN from the IRS.</p></li><li><span class="n">3</span><p><b>set aside about 25–30% for taxes</b> from the first dollar — nobody withholds it for you.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./topics/how-to-start-an-llc.html">how to start an LLC →</a><a href="./topics/freelance-taxes.html">freelance taxes →</a><a href="./topics/self-employed-retirement.html">retirement when you're self-employed →</a></div>
+          <button type="button" class="share" data-id="business">copy link to this chapter</button>
+        </div>
+      </details>
+      <details class="ch" id="starting-over" style="--c:#D4FF4F">
+        <summary><span class="t">i'm starting over from zero</span><span class="o">rebuilding credit, income, and a cushion — one small thing at a time.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>get an account in your name only</b> and pull your free credit reports to see where you stand.</p></li><li><span class="n">2</span><p><b>build credit on purpose</b> — a secured card, paid in full every month, is a solid start.</p></li><li><span class="n">3</span><p><b>build the cushion in stages</b>: $500, then $1,000, then a month of essentials.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./topics/how-to-build-credit.html">how to build credit →</a><a href="./topics/emergency-fund.html">your emergency fund →</a><a href="./guides/how-to-get-out-of-debt.html">how to get out of debt →</a></div>
+          <button type="button" class="share" data-id="starting-over">copy link to this chapter</button>
+        </div>
+      </details>
+      </div>
+    </div>
+  </section>
+  <section class="grp" id="g-caring" aria-labelledby="h-caring">
+    <div class="wrap">
+      <div class="grp-head"><h2 id="h-caring">taking care of people</h2><p>kids on your own, a parent who needs you.</p></div>
+      <div class="list">
+      <details class="ch" id="kids-alone" style="--c:#FFFFFF">
+        <summary><span class="t">i'm raising kids on my own</span><span class="o">the filing status, the credits, and the paperwork that protects them.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>file as head of household</b> and claim the child tax credit — up to $2,200 per child.</p></li><li><span class="n">2</span><p><b>name a guardian in a will</b> and check every beneficiary, so a court doesn't decide for you.</p></li><li><span class="n">3</span><p><b>build your cushion</b> — aim for more than the usual 3 months when you're the only income.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./topics/kids-and-taxes.html">kids &amp; taxes →</a><a href="./topics/beneficiary-designations.html">beneficiary designations →</a><a href="./topics/emergency-fund.html">your emergency fund →</a></div>
+          <button type="button" class="share" data-id="kids-alone">copy link to this chapter</button>
+        </div>
+      </details>
+      <details class="ch" id="parent" style="--c:#FFFFFF">
+        <summary><span class="t">i'm caring for a parent</span><span class="o">the paperwork to do while they can still sign it.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>get a durable power of attorney and a health care proxy</b> signed while your parent can still make decisions.</p></li><li><span class="n">2</span><p><b>make a list of their accounts, bills, and insurance</b> — where they are and how to log in.</p></li><li><span class="n">3</span><p><b>protect your own money</b>: keep contributing to your retirement, and track what you spend on their care.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./topics/caregiving-career-break.html">after a caregiving career break →</a><a href="./topics/great-wealth-transfer.html">the great wealth transfer →</a></div>
+          <button type="button" class="share" data-id="parent">copy link to this chapter</button>
+        </div>
+      </details>
+      </div>
+    </div>
+  </section>
+  <section class="grp" id="g-happened" aria-labelledby="h-happened">
+    <div class="wrap">
+      <div class="grp-head"><h2 id="h-happened">something just happened</h2><p>an offer, a bill, or money you didn't expect.</p></div>
+      <div class="list">
+      <details class="ch" id="offer" style="--c:#E3DAFF">
+        <summary><span class="t">i got a job offer</span><span class="o">before you say yes — say thank you, then ask.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>don't accept on the spot.</b> say thank you and ask for the full offer in writing.</p></li><li><span class="n">2</span><p><b>look up what the role pays</b> where you live, and pick your number before the call.</p></li><li><span class="n">3</span><p><b>ask for more</b> — base pay first, then benefits, title, or flexibility.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./guides/how-to-negotiate-your-salary.html">how to negotiate your salary →</a><a href="./guides/health-insurance-decoded.html">health insurance, decoded →</a></div>
+          <button type="button" class="share" data-id="offer">copy link to this chapter</button>
+        </div>
+      </details>
+      <details class="ch" id="sudden-money" style="--c:#E3DAFF">
+        <summary><span class="t">i came into money</span><span class="o">an inheritance, a settlement, a bonus.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>park it somewhere safe and boring</b> — a high-yield savings account — and wait 30 days before deciding anything.</p></li><li><span class="n">2</span><p><b>pay off high-interest debt</b> first. that interest outruns almost any investment.</p></li><li><span class="n">3</span><p><b>then decide, with help if it's big</b> — a fee-only advisor who isn't selling you anything.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./guides/sudden-money-what-to-do.html">sudden money: what to do →</a><a href="./topics/vet-a-financial-advisor.html">how to vet a financial advisor →</a><a href="./topics/where-to-park-cash.html">where to park cash →</a></div>
+          <button type="button" class="share" data-id="sudden-money">copy link to this chapter</button>
+        </div>
+      </details>
+      <details class="ch" id="surprise-bill" style="--c:#E3DAFF">
+        <summary><span class="t">i got a surprise bill or ticket</span><span class="o">paying right away isn't always the move.</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="kick">your first three steps</p>
+          <ol class="steps"><li><span class="n">1</span><p><b>ask for an itemized bill</b> — errors are common, especially on medical bills.</p></li><li><span class="n">2</span><p><b>ask for a payment plan or a reduction</b> before it goes to collections. many places say yes.</p></li><li><span class="n">3</span><p><b>for a ticket, read your options</b> — traffic school, a reduction, or contesting it.</p></li></ol>
+          <div class="more"><p class="kick">go deeper</p><a href="./license.html">tickets &amp; your license →</a><a href="./guides/credit-card-interest-trap.html">the credit card interest trap →</a><a href="./topics/emergency-fund.html">your emergency fund →</a></div>
+          <button type="button" class="share" data-id="surprise-bill">copy link to this chapter</button>
+        </div>
+      </details>
+      </div>
+    </div>
+  </section>
+
+<section class="map dark" aria-labelledby="map-h">
+  <div class="wrap">
+    <div>
+      <h2 id="map-h">take it with you.</h2>
+      <p>the money map puts your footing, every chapter's first three steps, and where each dollar goes on 3 free pages. <b style="color:#fff">my own file</b> is the 6-page printable to fill in and keep — your documents, accounts, numbers, people, and next steps.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <a class="btn-lime" href="./money-map.html">get the money map →</a>
+      <a class="btn-lime" style="background:transparent;color:var(--lime);border:2px solid var(--lime)" href="./downloads/maltiplata-my-own-file.pdf" download>print my own file ↓</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot dark">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="./">malti<span>/</span>plata</a>
+      <p>maltiplata is not a financial, tax, or legal firm. we gather and translate information from trusted sources, cite everything, and double-check the facts. education, not advice. in danger? call 911, or the National Domestic Violence Hotline at 800-799-7233.</p>
+    </div>
+    <nav aria-label="footer">
+      <a href="./guides/index.html">guides</a>
+      <a href="./topics/index.html">topics</a>
+      <a href="./dictionary/index.html">dictionary</a>
+      <a href="./leaving.html">the quiet checklist</a>
+      <a href="./about.html">our story</a>
+    </nav>
+  </div>
 </footer>
 
+<button type="button" class="exit" id="exit" aria-label="quick exit: leave this site now">quick exit ✕</button>
+
 <script>
-
-// ── EMAIL SETUP: paste your ConvertKit/Mailchimp form ACTION url below.
-// Empty = forms just hand over the PDF (works today, no capture yet).
-var FORM_ENDPOINT = "";
-var PDF = "./downloads/the-money-map-maltiplata.pdf";
-
-document.querySelectorAll("form[data-capture]").forEach(function(f){
-  f.addEventListener("submit", function(e){
-    if(!FORM_ENDPOINT){ e.preventDefault(); window.location.href = PDF; return; }
-    f.action = FORM_ENDPOINT;
-  });
-});
-
 (function(){
-  var box = document.querySelector(".floatcta");
-  if(!box) return;
-  // respect dismissal for the session
-  if(sessionStorage.getItem("mp_float_closed") === "1"){ box.classList.add("hide"); return; }
-  document.body.classList.add("has-float");
+  /* quick exit: replaces this page in history, so "back" doesn't return here */
+  function leave(){ try{ location.replace('https://www.weather.com'); }catch(e){ location.href='https://www.weather.com'; } }
+  document.getElementById('exit').addEventListener('click',leave);
 
-  var shown = false;
-  function onScroll(){
-    if(shown) return;
-    if(window.scrollY > 520){ box.classList.add("show"); shown = true; }
+  /* open the chapter named in the link (maltiplata.com/start.html#divorce) */
+  function openFromHash(){
+    var id=decodeURIComponent(location.hash.slice(1)); if(!id) return;
+    var el=document.getElementById(id);
+    if(el && el.tagName==='DETAILS'){ el.open=true; el.scrollIntoView({block:'start'}); el.querySelector('summary').focus({preventScroll:true}); }
   }
-  window.addEventListener("scroll", onScroll, {passive:true});
-  onScroll();
+  openFromHash(); window.addEventListener('hashchange',openFromHash);
 
-  box.querySelector(".fclose").addEventListener("click", function(){
-    box.classList.remove("show");
-    document.body.classList.remove("has-float");
-    try{ sessionStorage.setItem("mp_float_closed","1"); }catch(e){}
-    setTimeout(function(){ box.classList.add("hide"); }, 350);
+  /* copy a shareable link to one chapter */
+  [].forEach.call(document.querySelectorAll('.share'),function(b){
+    b.addEventListener('click',function(){
+      var url='https://maltiplata.com/start.html#'+b.getAttribute('data-id');
+      var ok=function(){ b.textContent='link copied ✓'; b.classList.add('done'); setTimeout(function(){b.textContent='copy link to this chapter';b.classList.remove('done')},2200); };
+      if(navigator.clipboard){ navigator.clipboard.writeText(url).then(ok,function(){ prompt('copy this link:',url); }); }
+      else { prompt('copy this link:',url); }
+    });
   });
 })();
-
-
 </script>
 </body>
 </html>

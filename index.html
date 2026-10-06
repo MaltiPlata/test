@@ -79,6 +79,26 @@ p{margin:0}
 .results small{display:block;font-size:13px;line-height:1.4;color:var(--plum-soft);margin-top:2px}
 .results .none{padding:14px 16px;font-size:14px}
 
+/* chapters */
+.chapters{background:var(--white);border-bottom:var(--rule)}
+.chapters .wrap{padding-top:64px;padding-bottom:64px;display:flex;flex-direction:column;gap:28px}
+.chap-head{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:flex-end;justify-content:space-between}
+.chap-head > div{flex:1 1 520px;display:flex;flex-direction:column;gap:12px}
+.chap-head .kick{color:var(--purple)}
+.chap-head h2{font-size:clamp(34px,4.6vw,56px);line-height:.98}
+.chap-head > p{flex:1 1 300px;font-size:17px;line-height:1.5}
+.chap-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:var(--rule);border-left:var(--rule)}
+.chap-col{border-right:var(--rule);border-bottom:var(--rule);padding:20px 18px;display:flex;flex-direction:column;gap:12px}
+.chap-col:nth-child(1){background:var(--lilac)}.chap-col:nth-child(2){background:var(--lime)}.chap-col:nth-child(3){background:var(--lilac-pale)}.chap-col:nth-child(4){background:var(--lilac-mid)}
+.chap-col h3{font-size:14px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.chap-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.chap-col a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-.01em;line-height:1.25;padding:11px 0;border-top:1.5px solid rgba(42,24,64,.25);min-height:44px;align-items:center}
+.chap-col a:hover{color:var(--plum);text-decoration:underline;text-underline-offset:3px}
+.chap-all{align-self:flex-start;font-weight:900;font-size:16px;text-decoration:none;background:var(--plum);color:var(--lime);padding:0 20px;min-height:48px;display:inline-flex;align-items:center}
+.chap-all:hover{background:var(--purple);color:var(--lime)}
+@media (max-width:980px){.chap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.chap-grid{grid-template-columns:1fr}}
+
 /* photo */
 .photo{position:relative;height:clamp(300px,40vw,560px);overflow:hidden;background:var(--plum);border-bottom:var(--rule)}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
@@ -110,7 +130,7 @@ p{margin:0}
 .start-head > div{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:12px}
 .start-head .kick{color:var(--purple)}
 .start-head h2{font-size:clamp(36px,4.6vw,56px);line-height:.98}
-.start-head p{flex:1 1 340px;min-width:0;font-size:16px;line-height:1.55}
+.start-head > p{flex:1 1 340px;min-width:0;font-size:16px;line-height:1.55}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .card{text-decoration:none;color:var(--plum);border:var(--rule);padding:22px;display:flex;flex-direction:column;gap:10px;min-height:210px;transition:transform .15s ease,box-shadow .15s ease}
 .card:hover{color:var(--plum);transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--plum)}
@@ -193,7 +213,7 @@ p{margin:0}
   <div class="wrap">
     <a class="logo" href="./">malti<span>/</span>plata</a>
     <nav class="nav-links" aria-label="main">
-      <a href="./start.html">start here</a>
+      <a href="./start.html">find your chapter</a>
       <a href="./guides/index.html">guides</a>
       <a class="hide-sm" href="./dictionary/index.html">dictionary</a>
       <a class="hide-sm" href="./about.html">our story</a>
@@ -226,6 +246,20 @@ p{margin:0}
         <a href="./dictionary/escrow.html">escrow</a>
       </div>
     </form>
+  </div>
+</section>
+
+<section class="chapters" id="chapters" aria-labelledby="chapters-h">
+  <div class="wrap">
+    <div class="chap-head">
+      <div>
+        <p class="kick">find your chapter</p>
+        <h2 id="chapters-h">what are you going through right now?</h2>
+      </div>
+      <p>pick yours. you'll get the first three steps, and where to go next.</p>
+    </div>
+    <div class="chap-grid"><div class="chap-col"><h3>something is ending</h3><ul><li><a href="./start.html#divorce">i'm getting divorced <span aria-hidden="true">→</span></a></li><li><a href="./start.html#leaving">i need to leave — quietly <span aria-hidden="true">→</span></a></li><li><a href="./start.html#after-50">i'm divorcing after 50 <span aria-hidden="true">→</span></a></li><li><a href="./start.html#loss">my partner died <span aria-hidden="true">→</span></a></li></ul></div><div class="chap-col"><h3>starting something new</h3><ul><li><a href="./start.html#back-to-work">i'm going back to work <span aria-hidden="true">→</span></a></li><li><a href="./start.html#first-job">i'm starting my first job <span aria-hidden="true">→</span></a></li><li><a href="./start.html#first-place">i'm signing my first lease <span aria-hidden="true">→</span></a></li><li><a href="./start.html#business">i'm starting a business <span aria-hidden="true">→</span></a></li><li><a href="./start.html#starting-over">i'm starting over from zero <span aria-hidden="true">→</span></a></li></ul></div><div class="chap-col"><h3>taking care of people</h3><ul><li><a href="./start.html#kids-alone">i'm raising kids on my own <span aria-hidden="true">→</span></a></li><li><a href="./start.html#parent">i'm caring for a parent <span aria-hidden="true">→</span></a></li></ul></div><div class="chap-col"><h3>something just happened</h3><ul><li><a href="./start.html#offer">i got a job offer <span aria-hidden="true">→</span></a></li><li><a href="./start.html#sudden-money">i came into money <span aria-hidden="true">→</span></a></li><li><a href="./start.html#surprise-bill">i got a surprise bill or ticket <span aria-hidden="true">→</span></a></li></ul></div></div>
+    <a class="chap-all" href="./start.html">see every chapter →</a>
   </div>
 </section>
 
@@ -321,7 +355,7 @@ p{margin:0}
     <div class="map-copy">
       <p class="kick">free · 3 pages</p>
       <h2>get the money map.</h2>
-      <p>what belongs in your name, where every dollar goes, and the tax stuff nobody explained.</p>
+      <p>your own footing, the first three steps for every chapter, and where each dollar goes — 3 free pages.</p>
     </div>
     <form id="map-form" novalidate>
       <label class="kick" for="email">your email</label>
